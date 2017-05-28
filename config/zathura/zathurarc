@@ -1,0 +1,50 @@
+set show-scrollbars false
+set adjust-open width
+#set window-height 600
+#set window-width 850
+set font                        "inconsolata 9"
+
+set completion-bg               "#c3d0da"
+set completion-fg               "#beccdd"
+
+set completion-group-bg         "#beccdd"
+set completion-group-fg         "#83bed9"
+
+set completion-highlight-fg     "#c3d0da"
+set completion-highlight-bg     "#83bed9"
+
+set default-bg                  "#31475c"
+set default-fg                  "#c3d0da"
+
+set inputbar-bg                 "#31475c" 
+set inputbar-fg                 "#c3d0da"
+
+set statusbar-bg                "#c3d0da"
+set statusbar-fg                "#31475c"
+
+set notification-error-bg       "#beccdd"
+set notification-error-fg       "#c3d0da" 
+
+set notification-warning-bg     "#beccdd"
+set notification-warning-fg     "#c3d0da"
+
+set highlight-color             "#a1cdda"
+set highlight-active-color      "#5a9ca7"
+
+set notification-bg             "#beccdd"
+set notification-fg             "#c3d0da"
+
+set index-bg                    "#beccdd"
+set index-fg                    "#94a5b0"
+
+set index-active-bg             "#c3d0da"
+set index-active-fg             "#beccdd"
+
+set recolor-lightcolor          "#31475c"
+set recolor-darkcolor           "#c3d0da"
+
+set recolor                     "true"
+set recolor-keephue             "true"
+set recolor-reverse-video       "true"
+set scroll-hstep 9
+

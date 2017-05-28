@@ -1,0 +1,31 @@
+search Drop
+search Ma
+cd .config/ranger
+rename mistygirl.jpg
+rename meltface.jpg
+rename maples.jpg
+rename wave
+rename wave.jpg
+rename gnarly.jpg
+cd /home/oli/Documents/Pictures/Wallpapers
+mkdir beamer
+open_with aunpack
+rename iso
+rename isso
+rename init.vim.old
+mkdir 
+mkdir snippits
+touch tex.snippits
+cd .config
+rename tex.snippits.honza
+search probab
+
+mkdir Westbank 2017
+open_with gimp
+cd .Xresources-colors/
+touch mysterons
+open_with nvim
+delete
+mkdir lattice data
+search zim
+search zsh
