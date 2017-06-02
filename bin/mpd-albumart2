@@ -1,0 +1,29 @@
+#!/bin/sh 
+
+P=$(mpc -f %file% | head -1)
+T="/home/oli/.cache/mpd.jpg"
+
+#echo $P
+
+NP=$(dirname "/home/oli/stuff/Music/$P")
+
+#echo $NP
+
+CP="$NP/cover.jpg"
+
+if [ -f "$CP" ] && [ -f "$T" ]; then
+	if diff "$CP" "$T" >/dev/null ; then
+   		:
+		#echo Same
+	else
+		#echo Different
+		rm -f "$T" && ln -s "$CP" "$T"
+	fi
+elif [ -f "$CP" ]; then
+	rm -f "$T" && ln -s "$CP" "$T"
+elif [ -f "$T" ]; then
+	rm -f "$T"
+else
+	:   	
+fi
+

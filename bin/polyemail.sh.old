@@ -1,0 +1,22 @@
+#!/bin/sh   
+
+for n in {0..15}; do 
+    color[$n]=$(sh ~/bin/getxcolors.sh color$n)
+done
+
+colorm() {
+    if [ "$1" -ge "5" ]; then
+        echo %{F#${color[9]}}$1%{F-}
+        elif [ "$1" -ge "1" ]; then
+        echo %{F#${color[7]}}$1%{F-}
+        else 
+        echo "$1"
+        fi
+}
+
+
+LO=$(ls /home/oli/Mail/lostoli/INBOX/new | wc -l)
+OG=$(ls /home/oli/Mail/o.g.sargent/INBOX/new | wc -l)
+OS=$(ls /home/oli/Mail/olivers/INBOX/new | wc -l)
+
+echo "%{F#${color[3]}}[Mail:%{F-} $(colorm $LO)|$(colorm $OG)|$(colorm $OS)"]

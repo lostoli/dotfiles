@@ -1,0 +1,12 @@
+#!/bin/sh
+
+#check if mpd is running
+if pgrep mpd >/dev/null 2>&1
+  then
+     #echo "mpd is running"
+	lxterminal -e "bash -i start-ncmpcpp.sh"
+  else
+     # mpd is not running
+	mpd
+	lxterminal -e ncmpcpp
+fi
