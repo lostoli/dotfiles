@@ -34,5 +34,6 @@ trysymlink "$DOTFILES_DIR/zshrc" "$HOME/.zshrc"
 trysymlink "$DOTFILES_DIR/zimrc" "$HOME/.zimrc"
 trysymlink "$DOTFILES_DIR/rtorrent.rc" "$HOME/.rtorrent.rc"
 trysymlink "$DOTFILES_DIR/Xresources" "$HOME/.Xresources"
+trysymlink "$DOTFILES_DIR/pentadactylrc" "$HOME/.pentadactylrc"
 
 unset DOTFILES_DIR

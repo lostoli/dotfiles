@@ -6,135 +6,29 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 dzen2.font: inconsolata:size 10
-! urxvt settings
 
-URxvt*.depth: 32
-!URxvt*.background: [97]#030612
+#include "/home/oli/.Xresources-colors/themes/gnarly"
+
+! urxvt settings
+URxvt.depth: 32
 URxvt.scrollBar: false
-!URxvt.font: xft:Hack:style=Regular:size=10
-URxvt.font: -*-tamzenforpowerline-medium-*-*-*-15-*-*-*-*-*-*-*
-URxvt.boldFont: -*-tamzenforpowerline-medium-*-*-*-15-*-*-*-*-*-*-*
-URxvt.italicFont: -*-tamzenforpowerline-medium-*-*-*-15-*-*-*-*-*-*-*
+URxvt.font: xft:Hack:style=Regular:size=9
+URxvt.boldFont: xft:Hack:style=Bold:size=9
+URxvt.italicFont: xft:Hack:style=Italic:size=9
+!URxvt.font: -*-tamzenforpowerline-medium-*-*-*-15-*-*-*-*-*-*-*
+!URxvt.boldFont: -*-tamzenforpowerline-medium-*-*-*-15-*-*-*-*-*-*-*
+!URxvt.italicFont: -*-tamzenforpowerline-medium-*-*-*-15-*-*-*-*-*-*-*
 !URxvt.font: -*-tamsyn-medium-*-*-*-15-*-*-*-*-*-*-*                   
 !URxvt.boldfont : -*-tamsyn-medium-*-*-*-15-*-*-*-*-*-*-*              
 !URxvt.italicfont : -*-tamsyn-medium-*-*-*-15-*-*-*-*-*-*-*
 !URxvt.font: xft:inconsolata:size=11
-!URxvt.foreground: #e0d9df
-URxvt.letterSpace: 0 
-
-#include "/home/oli/.Xresources-colors/themes/gnarly-dark"
-! Colors  
-!*background:   bg  
-!*foreground:   fg  
-!*color0:      blk  
-!*color8:      bblk  
-!*color1:      red  
-!*color9:      bred  
-!*color2:      grn  
-!*color10:     bgrn  
-!*color3:      ylw  
-!*color11:     bylw  
-!*color4:      blu  
-!*color12:     bblu  
-!*color5:      mag  
-!*color13:     bmag  
-!*color6:      cyn  
-!*color14:     bcyn  
-!*color7:      wht  
-!*color15:     bwht  
-!*color0:     rgb:00/00/00
-!*color1:     rgb:98/56/5e
-!*color2:     rgb:66/82/5d
-!*color3:     rgb:96/91/76
-!*color4:     rgb:4d/65/85
-!*color5:     rgb:96/73/95
-!*color6:     rgb:5f/7f/7b
-!*color7:     rgb:b3/b3/b3
-!*color8:     rgb:73/73/73
-!*color9:     rgb:cf/a3/a9
-!*color10:    rgb:ca/f7/bb
-!*color11:    rgb:ff/f8/bc
-!*color12:    rgb:83/a3/be
-!*color13:    rgb:bb/a9/cf
-!*color14:    rgb:96/cc/cc
-!*color15:    rgb:ff/ff/ff
-
-*cursorColor: 4 
-
-!black
-!*color0:  #333333
-!*color8:  #333333
-
-!red
-!*color1:  #BF5C56
-!*color9:  #BF5C56
-
-!green
-!*color2:  #97B19C
-!*color10: #97B19C
-
-!yellow
-!*color3:  #D7BD8A
-!*color11: #D7BD8A
-
-!blue
-!*color4:  #545F72
-!*color12: #545f72
-
-!magenta
-!*color5:  #DD949A
-!*color13: #DD949A
-
-!cyan
-!*color6:  #BE926B
-!*color14: #BE926B
-
-!white
-!*color7:  #F4F4F2
-!*color15: #F4F4F2
-
-! special
-!*.foreground:   #9ad198
-!*.background:   #0f1200
-!*.cursorColor:  #9ad198
-
-! black
-!*.color0:       #0a0f14
-!*.color8:       #10151b
-
-! red
-!*.color1:       #c33027
-!*.color9:       #d26939
-
-! green
-!*.color2:       #57ac56
-!*.color10:      #217518
-
-! yellow
-!*.color3:       #edb54b
-!*.color11:      #d1f079
-
-! bluh
-!*.color4:       #196537
-!*.color12:      #b2ab37
-
-! magenta
-!*.color5:       #4e5165
-!*.color13:      #888ba5
-
-! cyan
-!*.color6:       #33859d
-!*.color14:      #599caa
-
-! white
-!*.color7:       #98d1ce
-!*.color15:      #d3ebe9
-
+URxvt.letterSpace: -1 
+URxvt.cursorColor: 4 
+URxvt.externalBorder: 0px
 URxvt.perl-ext: default,url-select
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/firefox
 URxvt.url-select.underline: true
-
 URxvt.perl-ext-common: default,tabbedex,matcher
 URxvt.keysym.Control-t: perl:tabbedex:new_tab
 URxvt.keysym.Control-Tab: perl:tabbedex:next_tab
@@ -149,8 +43,8 @@ URxvt.borderLess: false
 URxvt.internalBorder: 0 
 URxvt.urlLauncher     : firefox 
 URxvt.matcher.button  : 1
-URxvt.tabbed.tabbar-fg: 10 
-URxvt.tabbed.tabbar-bg: background 
-URxvt.tabbed.tab-fg: 9 
-URxvt.tabbed.tab-bg: background 
+URxvt.tabbed.tabbar-fg: 1 
+URxvt.tabbed.tabbar-bg: 7 
+URxvt.tabbed.tab-fg: 4 
+URxvt.tabbed.tab-bg: 7 
 URxvt.iconFile: /home/oli/.icons/AwOken/clear/24x24/apps/terminal1.png
