@@ -1,0 +1,18 @@
+set cdpath=''
+set scrollsteps=13
+set showtabline=never
+set maxitems=11
+set guioptions='s'
+colorscheme auto 
+command -description "Open private window" pb private winopen about:privatebrowsing
+command -description "Search google" -nargs=* goo open google <args>
+command -description "Search duckduckgo" -nargs=* ddg open duckduckgo <args>
+command -description "Search google images" -nargs=* gi open google-images <args>
+command -description "Search google maps" -nargs=* gm open googlemaps <args>
+command -description "Search google translate" -nargs=* gt open googletranslate <args>
+command -description "Search wikkipedia" -nargs=* wik open wikipedia <args>
+command -description "Play with MPV" m execute "silent !mpv '" + buffer.URL + "' &"
+
+hi FontFixed -a font-size:12px !important; font-family:"inconsolata" !important;
+
+"vim: set ft=pentadactyl:

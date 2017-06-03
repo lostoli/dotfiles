@@ -2,7 +2,7 @@
 
 #✽
 if [ "$(cat ~/.cache/updates)" -ge "1" ] ; then
-    echo "{%{F#$C3}%{F-}"
+    echo "%{F#$C3}%{F-}"
 else
-    echo "{%{F#$Cf}%{F-}"
+    echo "%{F#$Cf}%{F-}"
 fi
