@@ -15,8 +15,7 @@ let mapleader=" "
 let g:mapleader=" "
 let maplocalleader=" "
 set t_Co=256
-set background=dark
-colorscheme underwater 
+colorscheme seoul256-light 
 set encoding=utf8
 set spelllang=en_gb
 set foldmethod=marker
