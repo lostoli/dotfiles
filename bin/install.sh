@@ -22,7 +22,6 @@ function trysymlink {
     fi
 }
 
-trycreatedir "$HOME/bin"
 trycreatedir "$HOME/.Xresources-colors"
 
 trysymlink "$DOTFILES_DIR/bin" "$HOME/bin"

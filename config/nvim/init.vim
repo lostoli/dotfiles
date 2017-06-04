@@ -8,6 +8,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'flazz/vim-colorschemes'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 let mapleader=" "
@@ -18,6 +19,7 @@ set background=dark
 colorscheme underwater 
 set encoding=utf8
 set spelllang=en_gb
+set foldmethod=marker
 
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_latexmk_progname = 'nvr'

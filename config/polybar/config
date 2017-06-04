@@ -109,7 +109,50 @@ font-1 = FontAwesome:pixelsize=10;1
 modules-left = pkgupdates-available bspwm-new email mpd volume
 modules-center = 
 modules-right = flower backlight memory cpu wlan battery date 
-separator = }  { 
+separator = "  " 
+wm-restack = bspwm
+enable-ipc = true
+;}}}
+
+;{{{ math bar
+[bar/math]
+width = 100% 
+height = 20 
+offset-x = 0 
+offset-y = 0 
+
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
+
+overline-size = 0
+overline-color = #f00
+underline-size = 0
+underline-color = #00f
+
+border-bottom = 2
+border-bottom-color = ${xrdb:color1} 
+border-top = 0
+border-top-color = ${xrdb:color1} 
+border-left= 0
+border-left-color = ${xrdb:color1} 
+border-right= 0
+border-right-color = ${xrdb:color1} 
+
+spacing = 0
+padding-left = 1
+padding-right = 2
+module-margin-left = 0
+module-margin-right = 0
+font-0 = Iosevka Term:pixelsize=9;2
+font-1 = FontAwesome:pixelsize=10;1
+;font-0 = Misc Tamsyn:pixelsize=12;2
+;font-1 = unifont:size=10:fontformat=truetype;2
+;font-2 = Wuncon Siji:pixelsize=12;1
+
+modules-left = pkgupdates-available bspwm-new email music volume
+modules-center = 
+modules-right = flower weather memory cpu date 
+separator = "  " 
 wm-restack = bspwm
 enable-ipc = true
 ;}}}
@@ -334,6 +377,24 @@ exec = ~/bin/polyemail.sh
 tail = false 
 interval = 5 
 ellipsis = false
+;}}}
+
+;{{{ weather
+[module/weather]
+type = custom/script
+interval = 360 
+format = <label>
+format-prefix = " "
+format-prefix-foreground = ${xrdb:color12} 
+exec = ~/bin/weather.sh
+;}}}
+
+;{{{ spotify
+[module/music]
+type = custom/script
+interval = 2
+label = %output:0:45:...%
+exec = ~/bin/spotify.sh
 ;}}}
 
 ; vim:ft=dosini

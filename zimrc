@@ -32,6 +32,7 @@ zprompt_theme='minimal'
 # if none is provided, the default '.zcompdump' is used.
 #zcompdump_file=".zcompdump-${HOST}-${ZSH_VERSION}"
 
+
 #
 # Utility
 #
