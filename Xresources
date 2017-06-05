@@ -7,7 +7,7 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 dzen2.font: inconsolata:size 10
 
-#include "/home/oli/.Xresources-colors/themes/math"
+#include "/home/oli/.Xresources-colors/themes/water"
 
 ! urxvt settings
 URxvt.depth: 32

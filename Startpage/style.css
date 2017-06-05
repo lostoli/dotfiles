@@ -1,0 +1,235 @@
+html {
+        position: relative;
+        height: 100%;
+        font-family: "Inconsolata";
+      }
+
+body {
+        background-image: url("bg.jpg");
+        background-size: 100% 100%;
+	    position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        display: table;
+      }
+      
+#drag-1 {
+        background-color: #060002;
+        border: 2px solid;
+        border-color:  #728b78;
+        border-radius: 0em;
+        position: absolute;
+        height: auto;
+        width: 97px;
+        top: 315px;
+        left: 795px;*/  
+        color: #c4c4ba;
+        padding: 4px;
+        -webkit-transform: translate(0px, 0px);
+                transform: translate(0px, 0px);
+        }
+
+#drag-3 {
+        min-height: 75px;
+        background-color: #060002;
+        border: 2px solid;
+        border-color:  #728b78;
+        border-radius: 0em;
+        position: absolute;
+        height: 75px;
+        width: 460px;
+        top: 135px;
+        left: 225px;*/  
+        color: #c4c4ba;
+        padding: 4px;
+        -webkit-transform: translate(0px, 0px);
+                transform: translate(0px, 0px);
+        }
+
+.resize-drag {
+        background-color: #060002;
+        color: #c4c4b9;
+        /* This makes things *much* easier */
+        box-sizing: border-box;
+        }
+
+#drag-2 {
+        min-height: 28px;
+        background-color: #060002;
+        border: 2px solid;
+        border-color:  #728b78;
+        border-radius: 0em;
+        position: absolute;
+        height: 30px;
+        width: 360px;
+        top: 65px;
+        left: 565px;*/  
+        color: #c4c4ba;
+        padding: 4px;
+        -webkit-transform: translate(0px, 0px);
+                transform: translate(0px, 0px);
+        }
+
+.resize-drag {
+        background-color: #060002;
+        color: #c4c4b9;
+        /* This makes things *much* easier */
+        box-sizing: border-box;
+        }
+
+#drag-4 {
+        background-color: #060002;
+        border: 2px solid;
+        border-color:  #728b78;
+        border-radius: 0em;
+        position: absolute;
+        height: auto;
+        width: 490px;
+        top: 235px;
+        left: 75px;*/  
+        color: #c4c4ba;
+        padding: 4px;
+        -webkit-transform: translate(0px, 0px);
+                transform: translate(0px, 0px);
+        }
+
+.resize-drag {
+        background-color: #060002;
+        color: #c4c4b9;
+        /* This makes things *much* easier */
+        box-sizing: border-box;
+        }
+
+
+/*.resize-container {
+        width: 460px;
+        height: 28px;
+        }*/
+
+h3 {
+	    font-size: 14px;
+	    padding-bottom: 0;
+	    margin-bottom: 0;
+	    margin-top: 0;
+        }
+
+.color1 {
+        color: #728b78; 
+        padding: 0;
+        }
+
+.color2 {
+        color: #ac7220; 
+        padding: 0;
+        }
+
+.color3 {
+        color: #430b00; 
+        padding: 0;
+        }
+
+.color4 {
+        color: #c4c4ba;
+        padding: 0;
+        }
+
+.color5 {
+        color: #ffc195;
+        padding: 0;
+        }
+
+.color6 {
+        color: #af740c;
+        padding: 0;
+        }
+
+.color7 {
+        color: #f2e9e1;
+        padding: 0;
+        }
+
+.color8 {
+        color: #717769;
+        padding: 0;
+        }
+
+.color9 {
+        color: #6b826e;
+        padding: 0;
+        }
+
+.color10 {
+        color: #b5bd68;
+        padding: 0;
+        }
+
+.color11 {
+        color: #d7a978;
+        padding: 0;
+        }
+
+.color12 {
+        color: #627265; 
+        padding: 0;
+        }
+
+.color13 {
+        color: #d4c4ab;
+        padding: 0;
+        }
+
+.color14 {
+        color: #ab7644;
+        padding: 0;
+        }
+
+.color15 {
+        color: #f2e9e1;
+        padding: 0;
+        }
+
+.colorb {
+        color: #060002; 
+        padding: 0;
+        }
+
+.colorf {
+        color: #c4cdca; 
+        padding: 0;
+        }
+
+form {
+    	display: inline;
+        }
+
+input 	{
+	    display: inline;
+	    background: none;
+	    display: inline;
+	    border: none;
+	    color: #c4c4dca;
+	    font-size: 14px;
+        }
+
+a:link  {
+        color: #627265; 
+        }
+
+a:visited {
+        color: #627265;
+        }
+
+a:hover {
+        color: #af740c;
+        }
+
+a:active {
+        color: #728b78;
+        }
+
+
