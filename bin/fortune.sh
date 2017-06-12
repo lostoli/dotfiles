@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-cat >~/stuff/Startpage/fortune.html <<EOL
+cat >~/dotfiles/Startpage/fortune.html <<EOL
 <head>
 <meta http-equiv="refresh" content="600" >
 </head>

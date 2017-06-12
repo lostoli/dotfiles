@@ -1,5 +1,5 @@
 #!/bin/sh
-cat >~/stuff/Startpage/_colors.scss <<EOL
+cat >~/dotfiles/Startpage/_colors.scss <<EOL
 \$colorf: #$Cf;
 \$colorb: #$Cb;
 
@@ -29,7 +29,7 @@ cat >~/stuff/Startpage/_colors.scss <<EOL
 
 EOL
 
-sass ~/stuff/Startpage/style.scss ~/stuff/Startpage/style-test.css
-sass ~/stuff/Startpage/clock-style.scss ~/stuff/Startpage/clock-style.css
+sass ~/dotfiles/Startpage/style.scss ~/dotfiles/Startpage/style-test.css
+sass ~/dotfiles/Startpage/clock-style.scss ~/dotfiles/Startpage/clock-style.css
 
-cp $(grep -o '/home.*' ~/.fehbg | rev | cut -c 3- | rev) ~/stuff/Startpage/bg.jpg
+cp $(grep -o '/home.*' ~/.fehbg | rev | cut -c 3- | rev) ~/dotfiles/Startpage/bg.jpg

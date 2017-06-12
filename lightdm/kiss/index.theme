@@ -1,0 +1,6 @@
+[theme]
+name=kiss
+description=webkit2 greeter theme for LightDM display manager
+engine=lightdm-webkit2-greeter
+url=index.html
+session=gnome
