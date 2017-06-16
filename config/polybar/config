@@ -60,9 +60,9 @@ font-1 = FontAwesome:pixelsize=10;2
 ;font-1 = unifont:size=10:fontformat=truetype;2
 ;font-2 = Wuncon Siji:pixelsize=12;2
 
-modules-left = pkgupdates-available bspwm-new email mpd volume
+modules-left = bspwm-new mpd volume
 modules-center = 
-modules-right = flower backlight memory cpu wlan battery date 
+modules-right = flower weather backlight memory cpu wlan battery date 
 
 ;separator = }  { 
 separator = "  " 
@@ -305,7 +305,9 @@ label = %date% %time%
 [module/volume]
 type = internal/volume
 master-mixer = Master
-headphone-id = 9
+speaker-mixer = Speaker
+headphone-mixer = Headphone
+headphone-id = 29
 mapping = true
 format-volume = <ramp-volume> <label-volume>
 format-muted = <label-muted>

@@ -6,7 +6,7 @@ T="/home/oli/.cache/mpd.jpg"
 
 #echo $P
 
-NP=$(dirname "/home/oli/stuff/Music/$P")
+NP=$(dirname "/home/oli/music/Music/$P")
 
 #echo $NP
 
