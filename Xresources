@@ -9,7 +9,7 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 dzen2.font: inconsolata:size 10
 
-#include "/home/oli/.Xresources-colors/themes/lastman"
+#include "/home/oli/.Xresources-colors/themes/reddit1"
 
 ! urxvt settings
 URxvt.depth: 32
@@ -43,7 +43,7 @@ URxvt.keysym.Control-Shift-Right: perl:tabbedex:move_tab_right
 URxvt.keysym.Control-Shift-R: perl:tabbedex:rename_tab
 URxvt.borderLess: false
 URxvt.internalBorder: 0 
-URxvt.urlLauncher     : firefox 
+URxvt.urlLauncher     : /usr/bin/firefox 
 URxvt.matcher.button  : 1
 URxvt.tabbed.tabbar-fg: 1 
 URxvt.tabbed.tabbar-bg: 7 

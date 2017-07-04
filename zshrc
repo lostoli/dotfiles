@@ -8,6 +8,11 @@ bindkey "^[[7~" beginning-of-line
 bindkey "^[[8~" end-of-line
 
 
+#make delete home and end work
+bindkey    "^[[3~"          delete-char
+bindkey  "^[[7~"   beginning-of-line
+bindkey  "^[[8~"   end-of-line
+
 #If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -40,7 +45,7 @@ alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano PKGBUILD'
 alias restart='killall -SIGUSR1'
-alias update='pacaur -Syua && sudo pkgcacheclean'
+alias update='pacaur -Syu && sudo pkgcacheclean'
 alias update-lightdm='sudo ~/bin/update-lightdm.sh'
 alias sf='screenfetch -c 1,15'
 alias vpn-e2-4='sudo openvpn ~/Manjaro/VPN/vpnbook/vpnbook-euro2-tcp443.ovpn'
@@ -69,7 +74,7 @@ fi
 }
 function mkscript(){
     if [[ ! -a ~/bin/$1.sh ]]; then 
-        touch ~/bin/$1.sh && echo "#!/bin/bash" >! ~/bin/$1.sh && chmod +x ~/bin/$1.sh && $EDITOR ~/bin/$1.sh
+        touch ~/bin/$1.sh && echo "#!/bin/sh" >! ~/bin/$1.sh && chmod +x ~/bin/$1.sh && $EDITOR ~/bin/$1.sh
     else
         echo "Script allready exists!"
     fi

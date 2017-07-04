@@ -9,8 +9,8 @@
 
 ;{{{ global colors
 [colors]
-background = ${xrdb:background} 
-foreground = ${xrdb:foreground}
+background = ${xrdb:background};#d4d4d4 
+foreground = ${xrdb:foreground};#dd1f5c
 primary = ${xrdb:color9} 
 secondary = ${xrdb:color8}
 tertiary = ${xrdb:color4}

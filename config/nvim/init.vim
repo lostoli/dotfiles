@@ -9,6 +9,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'flazz/vim-colorschemes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
+Plug 'neomake/neomake'
 call plug#end()
 
 let mapleader=" "
@@ -22,6 +23,7 @@ set foldmethod=marker
 
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_latexmk_progname = 'nvr'
+let g:tex_comment_nospell=1
 
 let g:deoplete#auto_complete_start_length = 1 
 let g:deoplete#enable_at_startup = 1 
@@ -79,6 +81,7 @@ map <leader>sn ]s
 map <leader>sp [s
 map <leader>sa zg
 map <leader>s? z=
+map <leader>s  ]sz=
 
 " copy and paste
 vmap <C-c> "+y
@@ -91,6 +94,13 @@ set tabstop=8
 set expandtab    
 set shiftwidth=4
 set autoindent
+
+" insert newline at cursor
+nnoremap <C-J> a<CR><Esc>
+
+" cursorline options:
+set cursorline 
+hi CursorLine   cterm=NONE ctermbg=grey ctermfg=white
 
 " Escape special characters in a string for exact matching.
 " This is useful to copying strings from the file to the search tool
