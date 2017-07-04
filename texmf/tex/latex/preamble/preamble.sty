@@ -1,0 +1,233 @@
+%--->Declaration
+% Declare that this style file requires at least LaTeX version 2e.
+\NeedsTeXFormat{LaTeX2e}
+
+% Provide the name of your page, the date it was last updated, and a comment about what it's used for
+\ProvidesPackage{preamble}    
+%<---
+
+%---> Standard packages
+\usepackage{charter}
+\renewcommand{\familydefault}{\rmdefault}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=4cm,rmargin=4cm}
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{graphicx}
+\usepackage{color}
+\definecolor{document_fontcolor}{rgb}{0.175781, 0.183594, 0.230469}
+\color{document_fontcolor}
+\usepackage{babel}
+\usepackage{verbatim}
+\usepackage{upgreek}
+\usepackage{amstext}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[unicode=true,pdfusetitle,
+bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=true]
+{hyperref}
+\hypersetup{
+linkcolor=link, citecolor=cite}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}[section]
+\theoremstyle{plain}
+\newtheorem{lem}[thm]{\protect\lemmaname}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{\protect\definitionname}
+\theoremstyle{plain}
+\newtheorem{prop}[thm]{\protect\propositionname}
+\theoremstyle{plain}
+\newtheorem{cor}[thm]{\protect\corollaryname}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{\protect\remarkname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{mathtools}
+\usepackage{bbold}
+\usepackage{bbm}
+\usepackage{xcolor}
+\definecolor{link}{rgb}{0.3,0.3,0.9}
+\definecolor{cite}{rgb}{0.7,0.13,0.13}
+\usepackage{chngcntr}
+
+
+\providecommand{\corollaryname}{Corollary}
+\providecommand{\definitionname}{Definition}
+\providecommand{\lemmaname}{Lemma}
+\providecommand{\propositionname}{Proposition}
+\providecommand{\remarkname}{Remark}
+\providecommand{\theoremname}{Theorem}
+%<---
+
+%%--->Symbols
+%%------------------------------------------------------------------------------------------------------------
+%%              Latin Letters
+%%------------------------------------------------------------------------------------------------------------
+\newcommand{\declarecommand}[1]{\providecommand{#1}{}\renewcommand{#1}}
+\newcommand{\al}{\upalpha}
+\declarecommand{\mu}{\upmu}
+\declarecommand{\nu}{\upnu}
+\newcommand{\be}{\upbeta}
+\newcommand{\ga}{\upgamma}
+\newcommand{\Ga}{\upGamma}
+\newcommand{\del}{\updelta}
+\newcommand{\Del}{\upDelta}
+\newcommand{\lam}{\uplambda}
+\newcommand{\Lam}{\upLambda}
+\newcommand{\eps}{\upepsilon}
+\newcommand{\veps}{\upvarepsilon}
+\newcommand{\ka}{\upkappa}
+\newcommand{\sig}{\upsigma}
+\newcommand{\Sig}{\Upsigma}
+\newcommand{\om}{\upomega}
+\newcommand{\Om}{\upOmega}
+%------------------------------------------------------------------------------------------------------------
+%-----Capital letters--------------
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+% Mathbold
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bL}{\mathbb{L}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bQ}{\mathbb{Q}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bH}{\mathbb{H}}
+\newcommand{\bT}{\mathbb{T}}
+\newcommand{\bS}{\mathbb{S}}
+\newcommand{\bone}{\mathbb{1}}
+\newcommand{\gcd}{\on {gcd}}
+
+% Gothic Letters
+\newcommand{\goa}{\mathfrak{a}}
+\newcommand{\gob}{\mathfrak{b}}
+\newcommand{\goc}{\mathfrak{c}}
+\newcommand{\gog}{\mathfrak{g}}
+\newcommand{\goh}{\mathfrak{h}}
+\newcommand{\gol}{\mathfrak{l}}
+\newcommand{\gom}{\mathfrak{m}}
+\newcommand{\gon}{\mathfrak{n}}
+\newcommand{\gop}{\mathfrak{p}}
+\newcommand{\gos}{\mathfrak{s}}
+\newcommand{\got}{\mathfrak{t}}
+\newcommand{\gou}{\mathfrak{u}}
+\newcommand{\gor}{\mathfrak{r}}
+\newcommand{\goz}{\mathfrak{z}}
+\newcommand{\goq}{\mathfrak{q}}
+\newcommand{\goD}{\mathfrak{D}}
+\newcommand{\goL}{\mathfrak{L}}
+\newcommand{\gow}{\mathfrak{w}}
+\newcommand{\goT}{\mathfrak{T}}
+
+%%%%%%%Groups
+\newcommand{\OO}{\operatorname{O}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\SO}{\operatorname{SO}}
+\newcommand{\PO}{\operatorname{PO}}
+\newcommand{\PGL}{\operatorname{PGL}}
+\newcommand{\ASL}{\operatorname{ASL}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\PSL}{\operatorname{PSL}}
+\newcommand{\Gr}{\on{Gr}}
+\newcommand{\End}{\on{End}}
+\newcommand{\Stab}{\on{Stab}}
+%%<---
+
+%%--->special commands
+%%------------------------------------------------------------------------------------------------------------
+%%              Special commands
+%%------------------------------------------------------------------------------------------------------------
+\newcommand{\defi}{\coloneqq}
+\newcommand{\comp}{\circ}
+\newcommand{\lie}{\operatorname{Lie}}
+\newcommand\bignorm[1]{\left\|#1\right\|}
+\newcommand\norm[1]{\bigL\Vert #1\bigR\Vert}
+\newcommand\wt[1]{\widetilde{#1}}
+\newcommand\wh[1]{\widehat{#1}}
+\newcommand\set[1]{\bigL\{#1\bigR\}}
+\newcommand\pa[1]{\left(#1\right)}
+\newcommand\idist[1]{\langle#1\rangle}
+\newcommand\bigav[1]{\left|#1\right|}
+\newcommand\floor[1]{\left\lfloor#1\right\rfloor}
+\newcommand\ceil[1]{\left\lceil#1\right\rceil}
+\newcommand\av[1]{|#1|}
+\newcommand\on[1]{\operatorname{#1}}
+\newcommand\diag[1]{\operatorname{diag}\left(#1\right)}
+\newcommand\ol[1]{\overline{#1}}
+\newcommand\mb[1]{\mathbf{#1}}
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\Mat}{\operatorname{Mat}}
+\newcommand{\spa}{\on{span}}
+\newcommand{\supp}{\on{supp}}
+\newcommand{\Ad}{\on{Ad}}
+\newcommand{\hT}{\hat{T}}
+\newcommand{\mz}{\smallsetminus\set 0}
+\newcommand\dv[2]{\mathrm{d}#1(#2)}
+\newcommand\du[1]{\mathrm{d}#1}
+\newcommand{\qand}{\quad\textrm{and}\quad}
+\newcommand{\qor}{\quad\textrm{or}\quad}
+\newcommand\fa{\textrm{for all}}
+\newcommand\st{\textrm{such that}}
+\newcommand\te{\textrm{there exists}}
+\newcommand\qfa{\quad\textrm{for all}}
+\newcommand\qte{\quad\textrm{there exists}}
+\newcommand{\DT}[2]{\bT\bZ^{#2}_{#1}}
+\newcommand*{\act}{\raisebox{-0.65ex}{\scalebox{2.1}{$\cdot$}}}
+\newcommand{\isum}{\textstyle\sum}
+
+%Notes of coauthors
+\newcommand{\usnote}[1]{\marginpar{\color{cyan}\tiny [US] #1}}
+\newcommand{\usadd}[1]{{\color{cyan}{\tiny [US]} #1}}
+\newcommand{\osadd}[1]{{\color{green}{\tiny [OS]} #1}}
+%%%
+%%% it is possible to change the font from tiny to even smaller. here are two possibilities
+% \font\sn = cmssi8 scaled \magstep0
+% \font\ssn = cmssi5 scaled \magstep0
+% To use them write {\sn ...text... } for example.
+%-----------------------------------------------------
+%<---
+
+\endinput
+% vim:foldmethod=marker foldmarker=--->,<---
