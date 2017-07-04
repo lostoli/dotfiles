@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      html {
+        position: relative;
+        height: 100%;
+        font-family: "Inconsolata", "Noto Sans", "Liberation Sans", "Helvetica", "Arial", sans-serif;
+      }
+
+      body {
+        background-image: url("bg.jpg");
+	/*background: slategray;*/
+        background-size: cover;
+	position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        display: table;
+      }
+
+      /* ===== Power button ============================================
+       */
+      .power {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 2em;
+        background: transparent;
+        border: none;
+        transition: 250ms ease color;
+      }
+      .power:hover {
+        color: white;
+      }
+
+
+#drag-3 {
+  width: 100%;
+  height: 100%;
+  min-height: 6.5em;
+  background: transparent;
+  border: 0px solid;
+  border-color:  #728b78;
+  border-radius: 0em;
+  margin: 0%;
+  color: #c4c4ba;
+  padding: 0.5%;
+
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+#drag-1, #drag-2 {
+  min-height: 6.5em;
+  background-color: #060002;
+  border: 2px solid;
+  border-color:  #728b78;
+  border-radius: 0em;
+  position: absolute;
+  height: 40px;
+  width: 400px;
+  margin: -100px 0 0 -200px;
+  top: 50%;
+  left: 50%;  
+  color: #c4c4ba;
+  padding: 0.5%;
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+#drag-me::before {
+  content: "#" attr(id);
+  font-weight: bold;
+}
+
+
+.resize-drag {
+  background-color: #29e;
+  color: #c4c4b9;
+  border-radius: 0px;
+  padding: 0px;
+  margin: 0px 0px;
+  width: 460px;
+  height: 60px;
+  /* This makes things *much* easier */
+  box-sizing: border-box;
+}
+
+.resize-container {
+  width: 420px;
+  height: 60px;
+}
+
+
+
+      #hostname {
+        position: absolute;
+        top: 0.25em;
+        left: 0.25em;
+        margin: 0;
+      }
+
+      #input_table {
+        display: table-cell;
+        vertical-align: top;
+        text-align: left;
+        opacity: 0;
+        transition: 500ms cubic-bezier(.47,0,.74,.71) opacity;
+      }
+      #input_table.active {
+        opacity: 1;
+      }
+
+      .input {
+        background: #060002;
+        border: 0 none;
+        color: #c4c4ba;
+	padding: 0.25em;
+      }
+
+      .messageBox {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        text-align: center;
+      }
+    </style>
+<script src="interact.js"></script>
+<script>
+interact('.resize-drag')
+  .draggable({
+    onmove: window.dragMoveListener
+  })
+  .resizable({
+    preserveAspectRatio: false,
+    edges: { left: true, right: true, bottom: true, top: true }
+  })
+  .on('resizemove', function (event) {
+    var target = event.target,
+        x = (parseFloat(target.getAttribute('data-x')) || 0),
+        y = (parseFloat(target.getAttribute('data-y')) || 0);
+
+    // update the element's style
+    target.style.width  = event.rect.width + 'px';
+    target.style.height = event.rect.height + 'px';
+
+    // translate when resizing from top or left edges
+    x += event.deltaRect.left;
+    y += event.deltaRect.top;
+
+    target.style.webkitTransform = target.style.transform =
+        'translate(' + x + 'px,' + y + 'px)';
+
+    target.setAttribute('data-x', x);
+    target.setAttribute('data-y', y);
+    //target.textContent = event.rect.width + '×' + event.rect.height;
+  });
+
+function dragMoveListener (event) {
+    var target = event.target,
+        // keep the dragged position in the data-x/data-y attributes
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+    // translate the element
+    target.style.webkitTransform =
+    target.style.transform =
+      'translate(' + x + 'px, ' + y + 'px)';
+
+    // update the posiion attributes
+    target.setAttribute('data-x', x);
+    target.setAttribute('data-y', y);
+  }
+
+</script>
+    <script>
+      /*********************************************************************/
+      /*                Callbacks for lightdm-webkit-greeter               */
+      /*********************************************************************/
+
+      /*
+       * show_prompt callback.
+       */
+      function show_prompt(text, type) {
+        // type is either "text" or "password"
+        prompt = document.getElementById("prompt");
+        prompt.innerHTML = text;
+        entry = document.getElementById("entry");
+        entry.value = "";    // clear entry
+        entry.type = type;
+        entry.focus();
+      }
+
+      /*
+       * show_message callback.
+       */
+      function show_message(text, type) {
+        if (text.length == 0)
+          return;
+        messages = document.getElementById("messages");
+        messages.style.visibility = "visible";
+        // type is either "info" or "error"
+        if (type == "error") {
+          text = "<font color=\"red\">" + text + "</font>";
+        }
+        text = text + "<br>";
+        messages.innerHTML = messages.innerHTML + text;
+      }
+
+      /*
+      * authentication_complete callback.
+      */
+      function authentication_complete() {
+        if (lightdm.is_authenticated) {
+          lightdm.start_session_sync (); // Start default session
+        } else {
+          show_message ("Authentication Failed", "error");
+          setTimeout (start_authentication, 3000);
+        }
+      }
+
+      /*
+       * autologin_timer_expired callback.
+       */
+      function autologin_timer_expired(username) {
+        /* Stub.  Does nothing. */
+      }
+
+      /*********************************************************************/
+      /*                Functions local to this greeter                    */
+      /*********************************************************************/
+
+      /*
+       * clear_messages
+       */
+      function clear_messages() {
+        messages = document.getElementById("messages");
+        messages.innerHTML = "";
+        messages.style.visibility = "hidden";
+      }
+
+      /*
+       * Kickoff the authentication process
+       */
+      function start_authentication() {
+        clear_messages();
+        lightdm.authenticate();   // start with null userid, have pam prompt for userid.
+        setTimeout(function() {
+          // fade in input fields
+          document.getElementById('input_table')
+            .setAttribute('class', 'active');
+          // set hostname
+          document.getElementById('hostname').innerHTML = lightdm.hostname;
+        },250);
+      }
+
+      /*
+       * handle the input from the entry field.
+       */
+      function handle_input() {
+        entry = document.getElementById("entry");
+        lightdm.respond(entry.value);
+      }
+
+      /* ===== Mocked LightDM for debugging ============================
+       */
+      var mockedLightDM = {
+        "authenticate": function() {
+          console.log('lightdm.authenticate');
+          show_prompt('<font color="#ac7220">[login]</font><font color="#b5bd68">$</font>', 'text');
+        },
+        "respond": function(inputText) {
+          console.log('lightdm.respond', inputText);
+          show_prompt('<font color="#ac7220">[password]</font><font color="#d7a978">$</font>', 'password');
+        },
+        "shutdown": function() {
+          console.log('lightdm.shutdown');
+        },
+        "hostname": 'archlinux'
+      }
+      // Initialize a mocked LightDM or the real one.
+      window.lightdm = window.lightdm || mockedLightDM;
+    </script>
+<script>
+   // target elements with the "draggable" class
+interact('.draggable')
+  .draggable({
+    // enable inertial throwing
+    inertia: true,
+    // keep the element within the area of it's parent
+    restrict: {
+      restriction: "parent",
+      endOnly: true,
+      elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+    },
+    // enable autoScroll
+    autoScroll: true,
+
+    // call this function on every dragmove event
+    onmove: dragMoveListener,
+    // call this function on every dragend event
+    onend: function (event) {
+      var textEl = event.target.querySelector('p');
+
+      textEl && (textEl.textContent =
+        'moved a distance of '
+        + (Math.sqrt(event.dx * event.dx +
+                     event.dy * event.dy)|0) + 'px');
+    }
+  });
+
+  function dragMoveListener (event) {
+    var target = event.target,
+        // keep the dragged position in the data-x/data-y attributes
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+    // translate the element
+    target.style.webkitTransform =
+    target.style.transform =
+      'translate(' + x + 'px, ' + y + 'px)';
+
+    // update the posiion attributes
+    target.setAttribute('data-x', x);
+    target.setAttribute('data-y', y);
+  }</script> 
+  </head>
+  <body>
+
+
+
+
+<div class="resize-container">
+  <div id=drag-2 class="resize-drag">
+     <div id=input_table> 
+<form action="javascript: handle_input()">
+        <label id=prompt for=entry></label>
+        <input class=input id=entry>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <p class=messageBox id=messages></p>
+
+    <script>
+      start_authentication();
+    </script>
+  </body>
+</html>

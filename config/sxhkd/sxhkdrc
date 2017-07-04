@@ -122,7 +122,7 @@ super + Return
     urxvtc	
 
 Menu
-    sh ~/bin/dmenu_col.sh 	
+    sh ~/bin/dmenu_col_rec.sh 	
 		
 super + F12
     lyx	

@@ -25,7 +25,7 @@ open_with gimp
 cd .Xresources-colors/
 touch mysterons
 open_with nvim
-delete
 mkdir lattice data
 search zim
 search zsh
+delete

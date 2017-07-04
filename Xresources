@@ -1,3 +1,5 @@
+Xcursor.theme: DMZ 
+
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
@@ -7,7 +9,7 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 dzen2.font: inconsolata:size 10
 
-#include "/home/oli/.Xresources-colors/themes/water"
+#include "/home/oli/.Xresources-colors/themes/lastman"
 
 ! urxvt settings
 URxvt.depth: 32

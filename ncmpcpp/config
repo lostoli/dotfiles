@@ -285,7 +285,7 @@ song_columns_list_format = (20)[]{a} (50)[white]{t|f:Title} (20)[magenta]{b} (7f
 ## Note: Custom command that will be executed each
 ## time song changes. Useful for notifications etc.
 ##
-execute_on_song_change = "sh Manjaro/Scripts/mpd-albumart3.sh &"
+execute_on_song_change = "sh bin/mpd-albumart3.sh &"
 #
 #playlist_show_mpd_host = no
 #

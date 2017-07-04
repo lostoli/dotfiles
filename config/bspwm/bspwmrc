@@ -12,13 +12,11 @@ bspc config bottom_padding 0
 bspc config top_padding 0 
 bspc config focused_border_color '#'$C1
 bspc config normal_border_color '#'$C0
-bspc config presel_border_color '#'$C5
 bspc config presel_feedback_color '#'$C4
 bspc config honor_size_hints true
 bspc config split_ratio         0.52
 bspc config borderless_monocle  false 
 bspc config gapless_monocle     false 
-bspc config focus_by_distance   true
 bspc config focus_follows_pointer true
 
 bspc monitor -d 1 2 3 4 5 6 
@@ -29,15 +27,15 @@ bspc desktop ^3 -l monocle
 
 sh ~/.fehbg &
 urxvtd -q -o -f &
-sh ~/Manjaro/Scripts/bspwmfloatingdesktop.sh &
+sh ~/bin/bspwmfloatingdesktop.sh &
 sxhkd &
 #sh ~/.config/bspwm/panel/info | dzen2 -p -y -1 -fn inconsolata:size=11 &
 #compton --config ~/.config/compton.conf &
 (sleep 1s && unclutter -idle 1 -jitter 2 -root) &
 #(sleep 1s && pnmixer) &
 #(sleep 3s && conky -d -c /home/oli/.conkyrc) &
-(sleep 4s && xfce4-power-manager) &
-#(sleep 6s && sh /home/oli/Manjaro/Scripts/conky-stat.sh) &
-(sleep 2s && sh /home/oli/Manjaro/Scripts/update-startpage.sh) &
-(sleep 2s && sh /home/oli/Manjaro/Scripts/update-zathura.sh) &
-(sleep 2s && sh /home/oli/Manjaro/Scripts/update-pentadactcyle.sh) &
+#(sleep 4s && xfce4-power-manager) &
+#(sleep 6s && sh /home/oli/bin/conky-stat.sh) &
+(sleep 2s && sh /home/oli/bin/update-startpage.sh) &
+(sleep 2s && sh /home/oli/bin/update-zathura.sh) &
+(sleep 2s && sh /home/oli/bin/update-pentadactcyle.sh) &

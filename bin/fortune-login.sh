@@ -1,13 +1,11 @@
 #!/bin/bash
 
 
-cat >~/dotfiles/Startpage/fortune.html <<EOL
-<head>
-<meta http-equiv="refresh" content="600" >
-</head>
-<body>
+cat >/etc/issue <<EOL
+Manjaro Linux \r  (\n) (\l)
+
 $(fortune -a)
-</body>
+
 EOL
 #echo $(fortune -a)  > ~/stuff/Startpage/fortune.html
 #sed -i 's/$/<br>/' ~/stuff/Startpage/fortune.html

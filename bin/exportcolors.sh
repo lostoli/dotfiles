@@ -1,8 +1,6 @@
-#!/bin/sh
+#!/bin/zsh
 
-for n in {0..15}; do 
-export "C$n"="$(sh ~/bin/getxcolors.sh color$n)"
-done
-export Cb="$(sh ~/bin/getxcolors.sh background)"
-export Cf="$(sh ~/bin/getxcolors.sh foreground)"
+for n ({0..15}); do export "C$n"="$(getxcolors.sh color$n)"; done
+export Cb="$(getxcolors.sh background)"
+export Cf="$(getxcolors.sh foreground)"
 
