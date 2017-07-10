@@ -79,3 +79,7 @@ function mkscript(){
         echo "Script allready exists!"
     fi
 }
+
+function mm() {
+    mpv --no-video --ytdl-format=bestaudio ytdl://ytsearch10:"$@"
+}

@@ -1,8 +1,8 @@
 #!/bin/sh
 # end a command with ; to run in a terminal
 
-SB="#$C9"
-SF="#$C0"
+SB="#$C8"
+SF="#$Cb"
 NB="#$Cb"
 NF="#$Cf"
 OPTIONS1="-lh 19 -nb $NB -nf $NF -sb $SB -sf $SF"

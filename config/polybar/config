@@ -60,7 +60,7 @@ font-1 = FontAwesome:pixelsize=10;2
 ;font-1 = unifont:size=10:fontformat=truetype;2
 ;font-2 = Wuncon Siji:pixelsize=12;2
 
-modules-left = bspwm-new mpd volume
+modules-left = pkgupdates-available bspwm-new email mpd volume
 modules-center = 
 modules-right = flower weather backlight memory cpu wlan battery date 
 

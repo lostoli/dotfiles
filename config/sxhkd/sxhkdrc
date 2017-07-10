@@ -4,7 +4,6 @@
 super + x
 	bspc  node -c
 
-
 # Toggle tiling mode of node
 super + l 
 	bspc desktop -l next
@@ -113,7 +112,7 @@ XF86AudioMute
     sh ~/bin/alsa-toggle.sh 
 
 Print
-    gnome-screenshot --delay=5    
+    scrot '%Y-%m-%d-[%H:%M].png' -e 'mv $f ~/pics/scrots/' -d 2
 
 super + space
      test -n "$(mpc | grep playing)" && mpc pause || mpc play
@@ -148,3 +147,7 @@ super + bracketright
 # make sxhkd reload its configuration files:
 super + shift + Escape
 	pkill -USR1 -x sxhkd
+
+# logout
+ctrl + alt + BackSpace
+    bspc quit

@@ -16,10 +16,12 @@ let mapleader=" "
 let g:mapleader=" "
 let maplocalleader=" "
 set t_Co=256
-colorscheme seoul256-light 
+colorscheme peaksea 
 set encoding=utf8
 set spelllang=en_gb
+set cursorline
 set foldmethod=marker
+hi CursorLine  cterm=NONE ctermbg=cyan ctermfg=black 
 
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_latexmk_progname = 'nvr'

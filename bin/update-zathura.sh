@@ -17,7 +17,7 @@ set completion-highlight-fg     "#$C2"
 set completion-highlight-bg     "#$C8"
 
 set default-bg                  "#$Cb"
-set default-fg                  "#$C2"
+set default-fg                  "#$Cf"
 
 set inputbar-bg                 "#$Cb" 
 set inputbar-fg                 "#$C2"
@@ -44,7 +44,7 @@ set index-active-bg             "#$C2"
 set index-active-fg             "#$C0"
 
 set recolor-lightcolor          "#$Cb"
-set recolor-darkcolor           "#$C2"
+set recolor-darkcolor           "#$Cf"
 
 set recolor                     "true"
 set recolor-keephue             "true"

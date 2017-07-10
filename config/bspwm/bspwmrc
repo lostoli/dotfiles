@@ -6,6 +6,7 @@ xset +fp /usr/share/fonts/local &
 xset fp rehash &
 xsetroot -cursor_name left_ptr &
 
+
 bspc config border_width        2
 bspc config window_gap          9
 bspc config bottom_padding 0
@@ -29,6 +30,7 @@ sh ~/.fehbg &
 urxvtd -q -o -f &
 sh ~/bin/bspwmfloatingdesktop.sh &
 sxhkd &
+dropbox-cli start &
 #sh ~/.config/bspwm/panel/info | dzen2 -p -y -1 -fn inconsolata:size=11 &
 #compton --config ~/.config/compton.conf &
 (sleep 1s && unclutter -idle 1 -jitter 2 -root) &
