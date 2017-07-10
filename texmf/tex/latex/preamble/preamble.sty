@@ -159,6 +159,7 @@ linkcolor=link, citecolor=cite}
 \newcommand{\goL}{\mathfrak{L}}
 \newcommand{\gow}{\mathfrak{w}}
 \newcommand{\goT}{\mathfrak{T}}
+\newcommand{\goB}{\mathfrak{B}}
 
 %%%%%%%Groups
 \newcommand{\OO}{\operatorname{O}}
@@ -187,7 +188,8 @@ linkcolor=link, citecolor=cite}
 \newcommand\wh[1]{\widehat{#1}}
 \newcommand\set[1]{\bigL\{#1\bigR\}}
 \newcommand\pa[1]{\left(#1\right)}
-\newcommand\idist[1]{\langle#1\rangle}
+%\newcommand\span[1]{\langle {#1} \rangle}
+\DeclarePairedDelimiter{\Sp}{\left\langle}{\right\rangle}
 \newcommand\bigav[1]{\left|#1\right|}
 \newcommand\floor[1]{\left\lfloor#1\right\rfloor}
 \newcommand\ceil[1]{\left\lceil#1\right\rceil}
@@ -214,8 +216,9 @@ linkcolor=link, citecolor=cite}
 \newcommand\qfa{\quad\textrm{for all}}
 \newcommand\qte{\quad\textrm{there exists}}
 \newcommand{\DT}[2]{\bT\bZ^{#2}_{#1}}
-\newcommand*{\act}{\raisebox{-0.65ex}{\scalebox{2.1}{$\cdot$}}}
+\newcommand*{\bcdot}{\raisebox{-0.65ex}{\scalebox{2.1}{$\cdot$}}}
 \newcommand{\isum}{\textstyle\sum}
+\newcommand{\sm}{\smallsetminus}
 
 %Notes of coauthors
 \newcommand{\usnote}[1]{\marginpar{\color{cyan}\tiny [US] #1}}
