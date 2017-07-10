@@ -21,6 +21,7 @@
 \color{document_fontcolor}
 \usepackage{babel}
 \usepackage{verbatim}
+\usepackage{enumerate}
 \usepackage{upgreek}
 \usepackage{amstext}
 \usepackage{amsthm}
@@ -55,6 +56,7 @@ linkcolor=link, citecolor=cite}
 \usepackage{xcolor}
 \definecolor{link}{rgb}{0.3,0.3,0.9}
 \definecolor{cite}{rgb}{0.7,0.13,0.13}
+\definecolor{note}{rgb}{0.91,0.11,0.51}
 \usepackage{chngcntr}
 
 
@@ -78,6 +80,7 @@ linkcolor=link, citecolor=cite}
 \newcommand{\ga}{\upgamma}
 \newcommand{\Ga}{\upGamma}
 \newcommand{\del}{\updelta}
+\newcommand{\ta}{\uptau}
 \newcommand{\Del}{\upDelta}
 \newcommand{\lam}{\uplambda}
 \newcommand{\Lam}{\upLambda}
@@ -223,7 +226,7 @@ linkcolor=link, citecolor=cite}
 %Notes of coauthors
 \newcommand{\usnote}[1]{\marginpar{\color{cyan}\tiny [US] #1}}
 \newcommand{\usadd}[1]{{\color{cyan}{\tiny [US]} #1}}
-\newcommand{\osadd}[1]{{\color{green}{\tiny [OS]} #1}}
+\newcommand{\osadd}[1]{{\color{note}{\tiny [OS]} #1}}
 %%%
 %%% it is possible to change the font from tiny to even smaller. here are two possibilities
 % \font\sn = cmssi8 scaled \magstep0
