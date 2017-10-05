@@ -12,6 +12,7 @@ command -description "Search google maps" -nargs=* gm open googlemaps <args>
 command -description "Search google translate" -nargs=* gt open googletranslate <args>
 command -description "Search wikkipedia" -nargs=* wik open wikipedia <args>
 command -description "Play with MPV" m execute "silent !mpv '" + buffer.URL + "' &"
+command -description "Zathura" z execute "silent !zathura '" + buffer.URL + "' &"
 
 hi FontFixed -a font-size:12px !important; font-family:"inconsolata" !important;
 

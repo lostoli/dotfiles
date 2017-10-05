@@ -16,7 +16,8 @@ let mapleader=" "
 let g:mapleader=" "
 let maplocalleader=" "
 set t_Co=256
-colorscheme peaksea 
+colorscheme otaku 
+set background=dark
 set encoding=utf8
 set spelllang=en_gb
 set cursorline
@@ -61,7 +62,7 @@ let g:deoplete#omni#input_patterns.tex = '\\(?:'
 
 
 let g:airline_powerline_fonts = 1
-let g:airline_theme='alduin'
+let g:airline_theme='base16color'
 
 "fast save
 map <leader>w :w<cr>

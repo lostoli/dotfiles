@@ -2,7 +2,32 @@ STFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt autocd
-bindkey -e
+
+#:::::testing
+bindkey -v
+
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+prompt_minimal_path() {
+  local path_color='%F{yellow}'
+  print -n "${path_color}${$(short_pwd)//\//%f\/${path_color}}%f"
+}
+function zle-line-init zle-keymap-select {
+    VIM_PROMPT="%{$fg_bold[yellow]%} [% n]%  %{$reset_color%}"
+    RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/}$(prompt_minimal_path)$(prompt_minimal_git) $EPS1"
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+export KEYTIMEOUT=1
+#::::end test
+
+
 bindkey "^[[3~" delete-char
 bindkey "^[[7~" beginning-of-line
 bindkey "^[[8~" end-of-line
@@ -45,7 +70,7 @@ alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano PKGBUILD'
 alias restart='killall -SIGUSR1'
-alias update='pacaur -Syu && sudo pkgcacheclean'
+alias update='pacaur -Syu && sudo paccache -r -k 2 && update.sh'
 alias update-lightdm='sudo ~/bin/update-lightdm.sh'
 alias sf='screenfetch -c 1,15'
 alias vpn-e2-4='sudo openvpn ~/Manjaro/VPN/vpnbook/vpnbook-euro2-tcp443.ovpn'
@@ -65,6 +90,8 @@ alias vsrc='$EDITOR ~/.config/sxhkd/sxhkdrc'
 alias vvrc='$EDITOR ~/.config/$EDITOR/init.vim'
 alias e=$EDITOR
 alias se='sudo $EDITOR'
+alias mx='rmaxima'
+alias :q='exit'
 
 function prepend(){
 # @author Abdennour TOUMI

@@ -108,7 +108,7 @@ font-1 = FontAwesome:pixelsize=10;1
 
 modules-left = pkgupdates-available bspwm-new email mpd volume
 modules-center = 
-modules-right = flower backlight memory cpu wlan battery date 
+modules-right = flower coins backlight memory cpu wlan battery date 
 separator = "  " 
 wm-restack = bspwm
 enable-ipc = true
@@ -171,8 +171,8 @@ label-occupied-foreground = ${colors.secondary}
 label-occupied-padding = 0
 
 label-urgent = %icon%
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-foreground = ${xrdb:color9}
+label-urgent-padding = 0
 
 label-empty = %icon%
 label-empty-foreground = ${colors.tertiary}
@@ -304,10 +304,13 @@ label = %date% %time%
 ;{{{ volume
 [module/volume]
 type = internal/volume
+master-soundcard = hw:0 
+speaker-soundcard = hw:0
+headphone-soundcard = hw:0
 master-mixer = Master
-speaker-mixer = Speaker
-headphone-mixer = Headphone
-headphone-id = 29
+;speaker-mixer = Speaker
+;headphone-mixer = Headphone
+;headphone-id = 9 
 mapping = true
 format-volume = <ramp-volume> <label-volume>
 format-muted = <label-muted>
@@ -377,14 +380,25 @@ ellipsis = false
 type = custom/script
 exec = ~/bin/polyemail.sh 
 tail = false 
-interval = 5 
+interval = 6 
+ellipsis = false
+;}}}
+
+;{{{ coins
+[module/coins]
+type = custom/script
+exec = ~/bin/crypto.sh 
+tail = false 
+interval = 605 
+format-prefix = ": "
+format-prefix-foreground = ${colors.secondary} 
 ellipsis = false
 ;}}}
 
 ;{{{ weather
 [module/weather]
 type = custom/script
-interval = 360 
+interval = 600 
 format = <label>
 format-prefix = " "
 format-prefix-foreground = ${xrdb:color12} 

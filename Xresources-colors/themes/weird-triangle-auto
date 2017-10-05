@@ -1,0 +1,21 @@
+! special
+*.foreground:    #201e1b
+*.background:    #f3dcce
+*.cursorColor:   #201e1b
+
+*.color0:        #1A1615
+*.color1:        #211E1C
+*.color2:        #331715
+*.color3:        #23201F
+*.color4:        #262626
+*.color5:        #2C3533
+*.color6:        #4E3531
+*.color7:        #384F45
+*.color8:        #595E50
+*.color9:        #A03435
+*.color10:       #BA423D
+*.color11:       #B0534A
+*.color12:       #CA6352
+*.color13:       #D7916D
+*.color14:       #AF59A9
+*.color15:       #EACAB0

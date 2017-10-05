@@ -20,104 +20,104 @@ body {
   outline: none; }
 
 #drag-1 {
-  background-color: #221f1d;
+  background-color: #182330;
   border: 2px solid;
-  border-color: #f1aeae;
+  border-color: #84d498;
   border-radius: 0em;
   position: absolute;
   height: auto;
   width: 97px;
   top: 315px;
   left: 795px;
-  color: #efdf5d;
+  color: #1aa662;
   padding: 4px;
   -webkit-transform: translate(0px, 0px);
   transform: translate(0px, 0px); }
 
 #drag-3 {
   min-height: 75px;
-  background-color: #221f1d;
+  background-color: #182330;
   border: 2px solid;
-  border-color: #f1aeae;
+  border-color: #84d498;
   border-radius: 0em;
   position: absolute;
   height: 75px;
   width: 460px;
   top: 135px;
   left: 225px;
-  color: #efdf5d;
+  color: #1aa662;
   padding: 4px;
   -webkit-transform: translate(0px, 0px);
   transform: translate(0px, 0px); }
 
 .resize-drag {
-  background-color: #221f1d;
-  color: #efdf5d;
+  background-color: #182330;
+  color: #1aa662;
   /* This makes things *much* easier */
   box-sizing: border-box; }
 
 #drag-2l {
   min-height: 28px;
-  background-color: #221f1d;
+  background-color: #182330;
   border: 2px solid;
-  border-color: #f1aeae;
+  border-color: #84d498;
   border-radius: 0em;
   position: absolute;
   height: 30px;
   width: 360px;
   top: 165px;
   left: 215px;
-  color: #efdf5d;
+  color: #1aa662;
   padding: 4px;
   -webkit-transform: translate(0px, 0px);
   transform: translate(0px, 0px); }
 
 .resize-drag {
-  background-color: #221f1d;
-  color: #efdf5d;
+  background-color: #182330;
+  color: #1aa662;
   /* This makes things *much* easier */
   box-sizing: border-box; }
 
 #drag-2 {
   min-height: 28px;
-  background-color: #221f1d;
+  background-color: #182330;
   border: 2px solid;
-  border-color: #f1aeae;
+  border-color: #84d498;
   border-radius: 0em;
   position: absolute;
   height: 30px;
   width: 360px;
   top: 65px;
   left: 565px;
-  color: #efdf5d;
+  color: #1aa662;
   padding: 4px;
   -webkit-transform: translate(0px, 0px);
   transform: translate(0px, 0px); }
 
 .resize-drag {
-  background-color: #221f1d;
-  color: #efdf5d;
+  background-color: #182330;
+  color: #1aa662;
   /* This makes things *much* easier */
   box-sizing: border-box; }
 
 #drag-4 {
-  background-color: #221f1d;
+  background-color: #182330;
   border: 2px solid;
-  border-color: #f1aeae;
+  border-color: #84d498;
   border-radius: 0em;
   position: absolute;
   height: auto;
   width: 490px;
   top: 235px;
   left: 75px;
-  color: #efdf5d;
+  color: #1aa662;
   padding: 4px;
   -webkit-transform: translate(0px, 0px);
   transform: translate(0px, 0px); }
 
 .resize-drag {
-  background-color: #221f1d;
-  color: #efdf5d;
+  background-color: #182330;
+  color: #1aa662;
   /* This makes things *much* easier */
   box-sizing: border-box; }
 
@@ -132,71 +132,71 @@ h3 {
   margin-top: 0; }
 
 .color1 {
-  color: #f1aeae;
+  color: #84d498;
   padding: 0; }
 
 .color2 {
-  color: #f3273e;
+  color: #1cfa67;
   padding: 0; }
 
 .color3 {
-  color: #4f6b54;
+  color: #85fa8d;
   padding: 0; }
 
 .color4 {
-  color: #efdf5d;
+  color: #1aa662;
   padding: 0; }
 
 .color5 {
-  color: #31463f;
+  color: #23ff77;
   padding: 0; }
 
 .color6 {
-  color: #ed282a;
+  color: #50fa7b;
   padding: 0; }
 
 .color7 {
-  color: #616e58;
+  color: #707f9c;
   padding: 0; }
 
 .color8 {
-  color: #b16462;
+  color: #707f9c;
   padding: 0; }
 
 .color9 {
-  color: #f1aeae;
+  color: #84d498;
   padding: 0; }
 
 .color10 {
-  color: #f3273e;
+  color: #1cfa67;
   padding: 0; }
 
 .color11 {
-  color: #4f6b54;
+  color: #85fa86;
   padding: 0; }
 
 .color12 {
-  color: #efdf5d;
+  color: #1aa662;
   padding: 0; }
 
 .color13 {
-  color: #31463f;
+  color: #23ff77;
   padding: 0; }
 
 .color14 {
-  color: #ed282a;
+  color: #50fa7b;
   padding: 0; }
 
 .color15 {
-  color: #f4d9d0;
+  color: #ffffff;
   padding: 0; }
 
 .colorb {
-  color: #221f1d;
+  color: #182330;
   padding: 0; }
 
 .colorf {
-  color: #f4d9d0;
+  color: #ffffff;
   padding: 0; }
 
 form {
@@ -207,19 +207,19 @@ input {
   background: none;
   display: inline;
   border: none;
-  color: #efdf5d;
+  color: #1aa662;
   font-size: 14px; }
 
 a:link {
-  color: #31463f; }
+  color: #23ff77; }
 
 a:visited {
-  color: #31463f; }
+  color: #23ff77; }
 
 a:hover {
-  color: #ed282a; }
+  color: #50fa7b; }
 
 a:active {
-  color: #f1aeae; }
+  color: #84d498; }
 
 /*# sourceMappingURL=style-test.css.map */

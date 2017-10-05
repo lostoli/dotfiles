@@ -10,56 +10,56 @@
 
 " Foreground colors                                                 {{{2
 " ----------------------------------------------------------------------
-hi s_base03 color: #f4d9d0 !important;
-hi s_base02 color: #f4d9d0 !important;
-hi s_base01 color: #f4d9d0 !important;
-hi s_base00 color: #f4d9d0 !important;
-hi s_base0 color: #efdf5d !important;
-hi s_base1 color: #f3273e !important;
-hi s_base2 color: #4f6b54 !important;
-hi s_base3 color: #ed282a !important;
-hi s_yellow color: #616e58 !important;
-hi s_orange color: #31463f !important;
-hi s_red color: #f1aeae !important;
-hi s_magenta color: #f1aeae !important;
-hi s_violet color: #ed282a !important;
-hi s_blue color: #31463f !important;
-hi s_cyan color: #4f6b54 !important;
-hi s_green color: #f1aeae !important;
-hi s_whitesheepf color: #f4d9d0 !important;
-hi s_greysheepf color: #f3273e !important;
-hi s_mediumsheepf color: #f1aeae !important;
-hi s_bluesheepf color: #f3273e !important;
-hi s_blacksheepf color: #221f1d !important;
+hi s_base03 color: #ffffff !important;
+hi s_base02 color: #ffffff !important;
+hi s_base01 color: #ffffff !important;
+hi s_base00 color: #ffffff !important;
+hi s_base0 color: #1aa662 !important;
+hi s_base1 color: #1cfa67 !important;
+hi s_base2 color: #85fa8d !important;
+hi s_base3 color: #50fa7b !important;
+hi s_yellow color: #707f9c !important;
+hi s_orange color: #23ff77 !important;
+hi s_red color: #84d498 !important;
+hi s_magenta color: #84d498 !important;
+hi s_violet color: #50fa7b !important;
+hi s_blue color: #23ff77 !important;
+hi s_cyan color: #85fa86 !important;
+hi s_green color: #84d498 !important;
+hi s_whitesheepf color: #ffffff !important;
+hi s_greysheepf color: #1cfa67 !important;
+hi s_mediumsheepf color: #84d498 !important;
+hi s_bluesheepf color: #1cfa67 !important;
+hi s_blacksheepf color: #182330 !important;
 
 
 " Background colors                                                 {{{2
 " ----------------------------------------------------------------------
-hi s_base03_back background-color: #221f1d !important;
-hi s_base02_back background-color: #221f1d !important;
-hi s_base01_back background-color: #221f1d !important;
-hi s_base00_back background-color: #221f1d !important;
-hi s_base0_back background-color: #efdf5d !important;
-hi s_base1_back background-color: #f3273e !important;
-hi s_base2_back background-color: #efdf5d !important;
-hi s_base3_back background-color: #efdf5d !important;
-hi s_yellow_back background-color: #efdf5d !important;
-hi s_orange_back background-color: #31463f !important;
-hi s_red_back background-color: #f1aeae !important;
-hi s_magenta_back background-color: #f1aeae !important;
-hi s_violet_back background-color: #ed282a !important;
-hi s_blue_back background-color: #31463f !important;
-hi s_cyan_back background-color: #4f6b54 !important;
-hi s_green_back background-color: #efdf5d !important;
-hi s_whitesheep background-color: #f4d9d0 !important;
-hi s_greysheep background-color: #efdf5d !important;
-hi s_mediumsheep background-color: #efdf5d !important;
-hi s_bluesheep background-color: #efdf5d !important;
-hi s_blacksheep background-color: #221f1d !important;
-hi s_sandy background-color: #f1aeae !important;
-hi s_grey background-color: #f3273e !important;
-hi s_red background-color: #4f6b54 !important;
-hi s_green background-color: #b16462 !important;
+hi s_base03_back background-color: #182330 !important;
+hi s_base02_back background-color: #182330 !important;
+hi s_base01_back background-color: #182330 !important;
+hi s_base00_back background-color: #182330 !important;
+hi s_base0_back background-color: #1aa662 !important;
+hi s_base1_back background-color: #1cfa67 !important;
+hi s_base2_back background-color: #1aa662 !important;
+hi s_base3_back background-color: #1aa662 !important;
+hi s_yellow_back background-color: #1aa662 !important;
+hi s_orange_back background-color: #23ff77 !important;
+hi s_red_back background-color: #84d498 !important;
+hi s_magenta_back background-color: #84d498 !important;
+hi s_violet_back background-color: #50fa7b !important;
+hi s_blue_back background-color: #23ff77 !important;
+hi s_cyan_back background-color: #85fa8d !important;
+hi s_green_back background-color: #1aa662 !important;
+hi s_whitesheep background-color: #ffffff !important;
+hi s_greysheep background-color: #1aa662 !important;
+hi s_mediumsheep background-color: #1aa662 !important;
+hi s_bluesheep background-color: #1aa662 !important;
+hi s_blacksheep background-color: #182330 !important;
+hi s_sandy background-color: #84d498 !important;
+hi s_grey background-color: #1cfa67 !important;
+hi s_red background-color: #85fa8d !important;
+hi s_green background-color: #707f9c !important;
 
 " Gradient backgrounds                                              {{{2
 " ----------------------------------------------------------------------
@@ -150,10 +150,10 @@ hi -l=s_blue Button::before -a
 hi -l=s_base0,s_base03_back HelpBody -a
 " Border is s_base3, and there to fake padding on the background image,
 " since the logo is black and I'm putting it on a white bg
-hi -l=s_base3_back Logo -a border: 5px solid #efdf5d !important;
+hi -l=s_base3_back Logo -a border: 5px solid #1aa662 !important;
 " This can't be !important, or else it overrides all links (e.g. ex,
 " key, opt). The color used here is s_blue
-hi HelpLink[href] -a color: #31463f;
+hi HelpLink[href] -a color: #23ff77;
 hi -l=s_blue HelpTopic -a
 hi -l=s_blue HelpType margin-right: 2ex;
 hi -l=s_magenta HelpInfoLabel -a
@@ -166,7 +166,7 @@ hi -l=s_red HelpTag -a
 hi -l=s_green HelpNewsTag -a
 hi -l=s_yellow HelpHead -a
 " Using s_base1 here for the border
-hi HelpBorder -a border-color: #f3273e !important;
+hi HelpBorder -a border-color: #1cfa67 !important;
 hi -l=s_cyan HelpSpec -a
 hi -l=s_cyan HelpArg -a
 hi -l=s_cyan HelpOptionalArg -a

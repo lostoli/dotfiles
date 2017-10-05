@@ -9,14 +9,17 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 dzen2.font: inconsolata:size 10
 
-#include "/home/oli/.Xresources-colors/themes/black-material"
+#include "/home/oli/.Xresources-colors/themes/clean-n-green"
 
 ! urxvt settings
 URxvt.depth: 32
 URxvt.scrollBar: false
-URxvt.font: xft:Hack:style=Regular:size=9
-URxvt.boldFont: xft:Hack:style=Bold:size=9
-URxvt.italicFont: xft:Hack:style=Italic:size=9
+URxvt.font: xft:Iosevka Term:style=Regular:size=10
+URxvt.italicFont: xft:Iosevka Term:style=Regular:size=10
+URxvt.boldFont: xft:Iosevka Term:style=Bold:size=10
+!URxvt.font: xft:Hack:style=Italic:size=9
+!URxvt.boldFont: xft:Hack:style=Bold:size=9
+!URxvt.italicFont: xft:Hack:style=Italic:size=9
 !URxvt.font: -*-tamzenforpowerline-medium-*-*-*-15-*-*-*-*-*-*-*
 !URxvt.boldFont: -*-tamzenforpowerline-medium-*-*-*-15-*-*-*-*-*-*-*
 !URxvt.italicFont: -*-tamzenforpowerline-medium-*-*-*-15-*-*-*-*-*-*-*

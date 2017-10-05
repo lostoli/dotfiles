@@ -1,25 +1,8 @@
-search Drop
-search Ma
-cd .config/ranger
-rename mistygirl.jpg
-rename meltface.jpg
-rename maples.jpg
-rename wave
-rename wave.jpg
-rename gnarly.jpg
-cd /home/oli/Documents/Pictures/Wallpapers
-mkdir beamer
-open_with aunpack
-rename iso
-rename isso
-rename init.vim.old
-mkdir 
 mkdir snippits
 touch tex.snippits
 cd .config
 rename tex.snippits.honza
 search probab
-
 mkdir Westbank 2017
 open_with gimp
 cd .Xresources-colors/
@@ -35,5 +18,33 @@ mkdir biogforbris
 open_with aunzip
 rename gpg-agent.conf
 search comet
+search li
+cd .config/
+rename circle.pdf
+rename X23-V4
+rename X23-V4.pdf
+open_with feh
+rename nicepic5.pdf.old
+rename nicepic5
+rename nicepic5.pdf
+mkdir testing
+mkdir tikz-test
+rename X23-V4-tikz.tex
+search candy
+search Chan
 delete
+rename unixporn
+rename cover.jpg
+open_with 
+open_with zathura
+open_with xournal
+mkdir .ethereum
+aunpack
+
+cd .electrum
+touch crypto.dat
 open_with nvim
+open_with aunpack
+rename .ripple-wallet-linux32-1.4.1
+cd .ripple-wallet-linux32-1.4.1/
+mkdir ark
