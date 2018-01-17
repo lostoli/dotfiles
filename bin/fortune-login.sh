@@ -2,7 +2,7 @@
 
 
 cat >/etc/issue <<EOL
-Manjaro Linux \r  (\n) (\l)
+Arch Linux \r  (\n) (\l)
 
 $(fortune -a)
 

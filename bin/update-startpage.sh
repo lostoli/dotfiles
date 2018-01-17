@@ -32,4 +32,4 @@ EOL
 sass ~/dotfiles/Startpage/style.scss ~/dotfiles/Startpage/style-test.css
 sass ~/dotfiles/Startpage/clock-style.scss ~/dotfiles/Startpage/clock-style.css
 
-cp $(grep -o '/home.*' ~/.fehbg | rev | cut -c 3- | rev) ~/dotfiles/Startpage/bg.jpg
+cp $(grep -o 'pics.*' ~/.fehbg | rev | cut -c 3- | rev) ~/dotfiles/Startpage/bg.jpg

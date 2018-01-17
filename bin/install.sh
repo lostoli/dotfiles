@@ -22,17 +22,23 @@ function trysymlink {
     fi
 }
 
-trycreatedir "$HOME/.Xresources-colors"
-
 trysymlink "$DOTFILES_DIR/bin" "$HOME/bin"
-trysymlink "$DOTFILES_DIR/config/nvim/init.vim" "$HOME/.config/nvim/init.vim"
-trysymlink "$DOTFILES_DIR/config/polybar/config" "$HOME/.config/polybar/config"
-trysymlink "$DOTFILES_DIR/Xresources-colors/colors" "$HOME/.Xresources-colors/colors"
-trysymlink "$DOTFILES_DIR/Xresources-colors/themes" "$HOME/.Xresources-colors/themes"
+trysymlink "$DOTFILES_DIR/Xresources-colors" "$HOME/.Xresources-colors/"
+trysymlink "$DOTFILES_DIR/pentadactyle" "$HOME/.pentadactyle/"
+trysymlink "$DOTFILES_DIR/ncmpcpp" "$HOME/.ncmpcpp"
+trysymlink "$DOTFILES_DIR/config/nvim" "$HOME/.config/nvim"
+trysymlink "$DOTFILES_DIR/config/mpd" "$HOME/.config/mpd"
+trysymlink "$DOTFILES_DIR/config/bspwm" "$HOME/.config/bspwm"
+trysymlink "$DOTFILES_DIR/config/ranger" "$HOME/.config/ranger"
+trysymlink "$DOTFILES_DIR/config/sxhkd" "$HOME/.config/sxhkd"
+trysymlink "$DOTFILES_DIR/config/zathura" "$HOME/.config/zathura"
+trysymlink "$DOTFILES_DIR/config/polybar" "$HOME/.config/polybar"
+trysymlink "$DOTFILES_DIR/latexmkrc" "$HOME/.latexmkrc"
 trysymlink "$DOTFILES_DIR/zshrc" "$HOME/.zshrc"
 trysymlink "$DOTFILES_DIR/zimrc" "$HOME/.zimrc"
+trysymlink "$DOTFILES_DIR/zlogin" "$HOME/.zlogin"
 trysymlink "$DOTFILES_DIR/rtorrent.rc" "$HOME/.rtorrent.rc"
-trysymlink "$DOTFILES_DIR/Xresources" "$HOME/.Xresources"
 trysymlink "$DOTFILES_DIR/pentadactylrc" "$HOME/.pentadactylrc"
+trysymlink "$DOTFILES_DIR/Xresources" "$HOME/.Xresources"
 
 unset DOTFILES_DIR

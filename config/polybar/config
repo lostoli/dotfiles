@@ -23,6 +23,7 @@ margin-bottom = 0
 
 ;{{{ candy bar
 [bar/candy]
+monitor = eDP1
 width = 1349 
 height = 18 
 offset-x = 9 
@@ -62,7 +63,7 @@ font-1 = FontAwesome:pixelsize=10;2
 
 modules-left = pkgupdates-available bspwm-new email mpd volume
 modules-center = 
-modules-right = flower weather backlight memory cpu wlan battery date 
+modules-right = flower weather backlight memory cpu wlan bat1 date 
 
 ;separator = }  { 
 separator = "  " 
@@ -73,6 +74,7 @@ enable-ipc = true
 
 ;{{{ wide bar
 [bar/wide]
+monitor = eDP1
 width = 100% 
 height = 20 
 offset-x = 0 
@@ -108,7 +110,7 @@ font-1 = FontAwesome:pixelsize=10;1
 
 modules-left = pkgupdates-available bspwm-new email mpd volume
 modules-center = 
-modules-right = flower coins backlight memory cpu wlan battery date 
+modules-right = flower coins backlight memory cpu bat0 date 
 separator = "  " 
 wm-restack = bspwm
 enable-ipc = true
@@ -266,7 +268,8 @@ label = %percentage_used%%
 ;{{{ wifi
 [module/wlan]
 type = internal/network
-interface = wlo1
+;interface = wlp4s0
+interface = wlan0
 interval = 3.0
 
 format-connected = <label-connected>
@@ -328,9 +331,39 @@ ramp-headphones-1 = 
 ;}}}
 
 ;{{{ battery 
-[module/battery]
+[module/bat0]
 type = internal/battery
 battery = BAT0
+adapter = AC
+full-at = 98
+
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = #ffb52a
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-underline = ${self.format-charging-underline}
+
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.secondary}
+format-full-underline = ${self.format-charging-underline}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-foreground = ${colors.secondary}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-foreground = ${colors.secondary}
+animation-charging-framerate = 1250
+;}}}
+
+;{{{ battery (extra)
+[module/bat1]
+type = internal/battery
+battery = BAT1
 adapter = AC
 full-at = 98
 
@@ -387,11 +420,11 @@ ellipsis = false
 ;{{{ coins
 [module/coins]
 type = custom/script
-exec = ~/bin/crypto.sh 
+exec = ~/bin/crypto2.sh 
 tail = false 
-interval = 605 
-format-prefix = ": "
-format-prefix-foreground = ${colors.secondary} 
+interval = 45 
+;format-prefix = ": "
+;format-prefix-foreground = ${colors.secondary} 
 ellipsis = false
 ;}}}
 

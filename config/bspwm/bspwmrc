@@ -29,7 +29,7 @@ bspc desktop ^3 -l monocle
 sh ~/.fehbg &
 urxvtd -q -o -f &
 sh ~/bin/bspwmfloatingdesktop.sh &
-sxhkd &
+#sxhkd &
 dropbox-cli start &
 #sh ~/.config/bspwm/panel/info | dzen2 -p -y -1 -fn inconsolata:size=11 &
 #compton --config ~/.config/compton.conf &

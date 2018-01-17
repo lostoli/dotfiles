@@ -1,4 +1,17 @@
-STFILE=~/.histfile
+
+
+#
+# User configuration sourced by interactive shells
+#
+
+# Change default zim location 
+export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
+
+# Source zim
+if [[ -s ${ZIM_HOME}/init.zsh ]]; then
+  source ${ZIM_HOME}/init.zsh
+fi
+HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt autocd
@@ -73,11 +86,6 @@ alias restart='killall -SIGUSR1'
 alias update='pacaur -Syu && sudo paccache -r -k 2 && update.sh'
 alias update-lightdm='sudo ~/bin/update-lightdm.sh'
 alias sf='screenfetch -c 1,15'
-alias vpn-e2-4='sudo openvpn ~/Manjaro/VPN/vpnbook/vpnbook-euro2-tcp443.ovpn'
-alias vpn-e2-8='sudo openvpn ~/Manjaro/VPN/vpnbook/vpnbook-euro2-tcp80.ovpn'
-alias vpn-u1-4='sudo openvpn ~/Manjaro/VPN/vpnbook/vpnbook-us1-tcp443.ovpn'
-alias vpn-u1-8='sudo openvpn ~/Manjaro/VPN/vpnbook/vpnbook-us1-tcp80.ovpn'
-alias vpn-e1-4='sudo openvpn ~/Manjaro/VPN/vpnbook/vpnbook-euro1-tcp443.ovpn'
 alias r-Xres='xrdb ~/.Xresources'
 alias mp='jmtpfs ~/mnt'
 alias up='fusermount -u ~/mnt'
@@ -92,6 +100,9 @@ alias e=$EDITOR
 alias se='sudo $EDITOR'
 alias mx='rmaxima'
 alias :q='exit'
+alias www='sudo systemctl restart wpa_supplicant.service && sudo systemctl restart connman.service && connmanctl'
+alias pow='sudo tlp stat'
+alias charge='sudo tlp fullcharge BAT1 && sudo tlp fullcharge BAT0'
 
 function prepend(){
 # @author Abdennour TOUMI
@@ -109,4 +120,12 @@ function mkscript(){
 
 function mm() {
     mpv --no-video --ytdl-format=bestaudio ytdl://ytsearch10:"$@"
+}
+
+function mult(){
+    echo $(($1*$2))
+}
+
+function div(){
+    echo $(($1/$2))
 }

@@ -1,50 +1,45 @@
-mkdir snippits
-touch tex.snippits
-cd .config
-rename tex.snippits.honza
-search probab
-mkdir Westbank 2017
-open_with gimp
-cd .Xresources-colors/
-touch mysterons
-mkdir lattice data
-search zim
-search zsh
-rename  .offlineimap-gmail.gpg
-rename .offlineimap-gmail.gpg
-rename .offlineimap-og.gpg
-cd .mutt
-mkdir biogforbris
-open_with aunzip
-rename gpg-agent.conf
-search comet
-search li
-cd .config/
-rename circle.pdf
-rename X23-V4
-rename X23-V4.pdf
-open_with feh
-rename nicepic5.pdf.old
-rename nicepic5
-rename nicepic5.pdf
-mkdir testing
-mkdir tikz-test
-rename X23-V4-tikz.tex
-search candy
-search Chan
-delete
-rename unixporn
-rename cover.jpg
+touch updates
+mkdir mnt1
+rename etherwallet.old
+cd /home/oli/.ethereum
+open_with
+open_with mpv
+mkdir
+mkdir bibtex
+mkdir bst
+mkdir ijmart
+mkdir .navcoin
+cd .navcoin/
+search .nav
 open_with 
-open_with zathura
-open_with xournal
-mkdir .ethereum
-aunpack
-
-cd .electrum
-touch crypto.dat
-open_with nvim
+cd Dropbox/Math/primitivewalks
 open_with aunpack
-rename .ripple-wallet-linux32-1.4.1
-cd .ripple-wallet-linux32-1.4.1/
-mkdir ark
+find 
+mkdir ftplugin
+cd .nvim/
+cd /home/oli/.config/nvim
+wq
+mkdir chrome
+touch userChrome.css
+
+rename X23-talk-2017.pdf
+open_with brave
+open_with nvim
+mkdir Random collatz
+mkdir pics
+mkdir pics2
+mkdir pics3
+mkdir Ariels-pics
+mkdir pics4
+mkdir pics5
+mkdir pics6
+mkdir pics7
+mkdir pics8
+mkdir pics9
+mkdir pics10
+delete
+mkdir pics11
+mkdir pics12
+mkdir pics13
+mkdir pics14
+mkdir k-extensions

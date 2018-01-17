@@ -24,14 +24,21 @@ super + {t,f,p}
 alt + {_,shift + }Tab
     bspc node -f {next.local,prev.local}
 
+#Focus next monitor
+super + m
+    bspc monitor next -f
 	
+#Send node to next desktop
+super + alt + m
+    bspc node -m next
+
 # Select nodes (move focus)
 super + {a,s,w,d}
 	bspc node -f {west,south,north,east} || bspc node -f {prev, prev, next, next}
 
 # Move tiled nodes. Moving a tiled node to preselected one moves into preselection instead. 
 super + shift + {a,s,w,d}
-     bspc node -s {west,south,north,north}
+     bspc node -v {-10 0,0 10,0 -10,10 0}
 
 #resize nodes
 super + ctrl + {d,a}
@@ -100,23 +107,38 @@ super + ctrl + equal
 
 # Lauchers
 
-XF86Mail
-    urxvtc -e mutt
-
-XF86HomePage
-    urxvtc -e update 
-
-super + F1
+alt + 1 
     sh ~/bin/polybartoggle.sh {1,2,3}
 
-super + F5
+alt + 2 
         urxvtc -g 123x18+100+388 -e sh -c "neofetch;sleep 60s"
 
-super + F6
-	javaws http://files.gokgs.com/javaBin/cgoban.jnlp
+alt + 3 
+	wmname LG3D && javaws http://files.gokgs.com/javaBin/cgoban.jnlp
 
-super + F7 
+alt + 4 
     sh ~/bin/start-mpd.sh
+
+alt + shift + 4 
+    sh ~/bin/start-mopidy.sh
+
+alt + 5 
+    firefox	
+
+alt + 6 
+    zathura
+    
+alt + 7 
+	urxvtc -e ranger
+
+alt + 8
+    offlineimap -o 
+
+alt + 9
+    urxvtc -e mutt
+
+alt + 0
+    urxvtc -e update 
 
 XF86Audio{Lower,Raise}Volume
     amixer -M set Master {5%-,5%+}
@@ -133,28 +155,17 @@ super + space
 super + Return
     urxvtc	
 
-Menu
+XF86Tools
     sh ~/bin/dmenu_col_rec.sh 	
 		
-super + F12
-    lyx	
 
-super + F11
-    firefox	
 
-super + F10
-    zathura
-    
-super + F9 
-	urxvtc -e ranger
-
-super + F8
-    offlineimap -o 
-
-super + bracketleft 
+#super + bracketleft 
+XF86MonBrightnessDown
     xbacklight -dec 5
 
-super + bracketright
+#super + bracketright
+XF86MonBrightnessUp
     xbacklight -inc 5
 
 # make sxhkd reload its configuration files:

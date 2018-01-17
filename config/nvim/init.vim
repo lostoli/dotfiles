@@ -22,7 +22,6 @@ set encoding=utf8
 set spelllang=en_gb
 set cursorline
 set foldmethod=marker
-hi CursorLine  cterm=NONE ctermbg=cyan ctermfg=black 
 
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_latexmk_progname = 'nvr'
@@ -103,7 +102,7 @@ nnoremap <C-J> a<CR><Esc>
 
 " cursorline options:
 set cursorline 
-hi CursorLine   cterm=NONE ctermbg=grey ctermfg=white
+hi CursorLine  cterm=NONE ctermbg=3 ctermfg=16 
 
 " Escape special characters in a string for exact matching.
 " This is useful to copying strings from the file to the search tool
