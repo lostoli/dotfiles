@@ -14,13 +14,15 @@ if pgrep mpd >/dev/null 2>&1
       killall mpd
 fi
 
-#check mopidy
+if ! pgrep -f .local/bin/bum >/dev/null 2>&1; then
+    $HOME/.local/bin/bum --size "360" &
+fi
+
 if pgrep mopidy >/dev/null 2>&1
   then
      urxvtc -g 84x$H+414+61 -e ncmpcpp
-  else
-    mopidy &
-    sh ~/.local/bin/bum
+else
+    mopidy & 
     urxvtc -g 84x$H+414+61 -e ncmpcpp
 fi
 #mopidy && ~/.local/bin/bum && ncmpcpp

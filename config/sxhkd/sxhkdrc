@@ -16,6 +16,10 @@ alt + ctrl + {a,s,w,d}
 super + {_,shift + }{1-9,0}
     bspc {desktop -f,node -d} ^{1-9,10}
 
+# Toggle most recently used desktops
+alt + period 
+    bspc desktop -f last 
+
 # Set tiling/floating/psuedo tiled mode
 super + {t,f,p}
 	bspc node -t {tiled,floating,pseudo_tiled} 
@@ -138,7 +142,7 @@ alt + 9
     urxvtc -e mutt
 
 alt + 0
-    urxvtc -e update 
+    urxvtc -e gtop 
 
 XF86Audio{Lower,Raise}Volume
     amixer -M set Master {5%-,5%+}
@@ -154,6 +158,9 @@ super + space
 
 super + Return
     urxvtc	
+
+super + z
+    urxvtc
 
 XF86Tools
     sh ~/bin/dmenu_col_rec.sh 	

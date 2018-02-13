@@ -14,4 +14,4 @@ LO=$(ls /home/oli/Mail/lostoli/INBOX/new | wc -l)
 OG=$(ls /home/oli/Mail/o.g.sargent/INBOX/new | wc -l)
 #OS=$(ls /home/oli/Mail/olivers2/INBOX/new | wc -l)
 
-echo "%{F#$C8}Mail:%{F-} $(colorm $LO)|$(colorm $OG)"
+echo "%{F#$C6}Mail:%{F-} $(colorm $LO)|$(colorm $OG)"

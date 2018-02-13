@@ -1,12 +1,3 @@
-touch updates
-mkdir mnt1
-rename etherwallet.old
-cd /home/oli/.ethereum
-open_with
-open_with mpv
-mkdir
-mkdir bibtex
-mkdir bst
 mkdir ijmart
 mkdir .navcoin
 cd .navcoin/
@@ -21,7 +12,6 @@ cd /home/oli/.config/nvim
 wq
 mkdir chrome
 touch userChrome.css
-
 rename X23-talk-2017.pdf
 open_with brave
 open_with nvim
@@ -37,9 +27,24 @@ mkdir pics7
 mkdir pics8
 mkdir pics9
 mkdir pics10
-delete
 mkdir pics11
 mkdir pics12
 mkdir pics13
 mkdir pics14
 mkdir k-extensions
+mkdir azores
+mkdir auth-keys
+cd /home/oli/.config/ranger/
+delete
+mkdir preamble-md
+rename userChrome.css.old
+rename userChrome.css.scroll
+rename userChrome.css.scrol
+rename userChrome.css
+rename userChrome.css.tri
+cd .local/
+
+rename Azores-outbound-eticket.pdf
+rename Azores-inbound-eticket.pdf
+search map
+rename cover.jpg

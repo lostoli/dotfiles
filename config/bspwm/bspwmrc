@@ -40,4 +40,4 @@ dropbox-cli start &
 #(sleep 6s && sh /home/oli/bin/conky-stat.sh) &
 (sleep 2s && sh /home/oli/bin/update-startpage.sh) &
 (sleep 2s && sh /home/oli/bin/update-zathura.sh) &
-(sleep 2s && sh /home/oli/bin/update-pentadactcyle.sh) &
+#(sleep 2s && sh /home/oli/bin/update-pentadactcyle.sh) &

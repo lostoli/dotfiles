@@ -66,6 +66,9 @@ let g:airline_theme='base16color'
 "fast save
 map <leader>w :w<cr>
 
+"fast unhighlight
+map <leader>n :noh<cr>
+
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>

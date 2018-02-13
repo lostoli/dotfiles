@@ -25,7 +25,7 @@ round() {
 }
 
 print (){
-    echo "%{F#$C8}$(get_sym $1):%{F-} \$$(round  3 $(get_price $1))/$(get_pec $1)%"
+    echo "%{F#$C6}$(get_sym $1):%{F-} \$$(round  3 $(get_price $1))/$(get_pec $1)%"
 }
 
 N=$(cat ~/.cache/cryptocounter)

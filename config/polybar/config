@@ -12,7 +12,7 @@
 background = ${xrdb:background};#d4d4d4 
 foreground = ${xrdb:foreground};#dd1f5c
 primary = ${xrdb:color9} 
-secondary = ${xrdb:color8}
+secondary = ${xrdb:color6}
 tertiary = ${xrdb:color4}
 alert = ${xrdb:color11}
 
