@@ -37,13 +37,13 @@ overline-color = #f00
 underline-size = 0
 underline-color = #00f
 
-border-bottom = 2
+border-bottom-size = 2
 border-bottom-color = ${xrdb:color1} 
-border-top = 2
+border-top-size = 2
 border-top-color = ${xrdb:color1} 
-border-left= 2
+border-left-size= 2
 border-left-color = ${xrdb:color1} 
-border-right= 2
+border-right-size= 2
 border-right-color = ${xrdb:color1} 
 
 spacing = 0
@@ -88,13 +88,13 @@ overline-color = #f00
 underline-size = 0
 underline-color = #00f
 
-border-bottom = 2
-border-bottom-color = ${xrdb:color1} 
-border-top = 0
+border-bottom-size = 2
+border-bottom-color = ${xrdb:color6} 
+border-top-size = 0
 border-top-color = ${xrdb:color1} 
-border-left= 0
+border-left-size= 0
 border-left-color = ${xrdb:color1} 
-border-right= 0
+border-right-size= 0
 border-right-color = ${xrdb:color1} 
 
 spacing = 0
@@ -108,7 +108,7 @@ font-1 = FontAwesome:pixelsize=10;1
 ;font-1 = unifont:size=10:fontformat=truetype;2
 ;font-2 = Wuncon Siji:pixelsize=12;1
 
-modules-left = pkgupdates-available bspwm-new email mpd volume
+modules-left = bspwm-new bluenetup email mpd pulseaudio 
 modules-center = 
 modules-right = flower coins backlight memory cpu bat0 date 
 separator = "  " 
@@ -131,13 +131,13 @@ overline-color = #f00
 underline-size = 0
 underline-color = #00f
 
-border-bottom = 2
+border-bottom-size = 2
 border-bottom-color = ${xrdb:color1} 
-border-top = 0
+border-top-size = 0
 border-top-color = ${xrdb:color1} 
-border-left= 0
+border-left-size= 0
 border-left-color = ${xrdb:color1} 
-border-right= 0
+border-right-size= 0
 border-right-color = ${xrdb:color1} 
 
 spacing = 0
@@ -224,6 +224,22 @@ icon-repeat = 
 toggle-on-foreground = ${colors.primary}
 ;}}}
 
+;{{{ mopidy
+[module/mopidy]
+type = internal/mpd
+port = 6601
+format-online = <label-song> 
+format-online-prefix = "Music: "
+format-online-prefix-foreground = ${colors.secondary}
+label-song-maxlen = 40
+label-song-ellipsis = true
+icon-play = 
+icon-pause = 
+icon-random = 
+icon-repeat = 
+toggle-on-foreground = ${colors.primary}
+;}}}
+
 ;{{{ backlight
 [module/backlight]
 type = internal/xbacklight
@@ -245,7 +261,7 @@ bar-empty-font = 2
 bar-empty-foreground = ${colors.primary}
 ;}}}
 
-;{{{ email
+;{{{ cpu
 [module/cpu]
 type = internal/cpu
 interval = 2
@@ -328,6 +344,25 @@ ramp-volume-foreground = ${colors.secondary}
 
 ramp-headphones-0 = 
 ramp-headphones-1 = 
+;}}}
+
+;{{{pulse audio
+[module/pulseaudio]
+type = internal/pulseaudio
+
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+;sink = alsa_output.pci-0000_12_00.3.analog-stereo
+format-volume = <ramp-volume> <label-volume>
+format-muted = <label-muted>
+label-volume = %percentage%%
+label-muted =  muted
+label-muted-foreground = ${colors.alert} 
+
+ramp-volume-0 =  
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-foreground = ${colors.secondary}
 ;}}}
 
 ;{{{ battery 
@@ -414,6 +449,24 @@ type = custom/script
 exec = ~/bin/polyemail.sh 
 tail = false 
 interval = 6 
+ellipsis = false
+;}}}
+
+;{{{ bluetooth
+[module/bluetooth]
+type = custom/script
+exec = ~/bin/poly-bt.sh 
+tail = false 
+interval = 20 
+ellipsis = false
+;}}}
+
+;{{{ bluenetup 
+[module/bluenetup]
+type = custom/script
+exec = ~/bin/polybluenetup.sh 
+tail = false 
+interval = 20 
 ellipsis = false
 ;}}}
 

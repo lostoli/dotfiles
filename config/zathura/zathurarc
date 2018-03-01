@@ -4,44 +4,44 @@ set adjust-open width
 #set window-width 850
 set font                        "inconsolata 9"
 
-set completion-bg               "#b8bb26"
-set completion-fg               "#1d2021"
+set completion-bg               "#d8d3cd"
+set completion-fg               "#121616"
 
-set completion-group-bg         "#1d2021"
-set completion-group-fg         "#665c54"
+set completion-group-bg         "#121616"
+set completion-group-fg         "#46b0ac"
 
-set completion-highlight-fg     "#b8bb26"
-set completion-highlight-bg     "#665c54"
+set completion-highlight-fg     "#d8d3cd"
+set completion-highlight-bg     "#46b0ac"
 
-set default-bg                  "#1d2021"
-set default-fg                  "#d5c4a1"
+set default-bg                  "#0a0d0d"
+set default-fg                  "#b7d5d3"
 
-set inputbar-bg                 "#1d2021" 
-set inputbar-fg                 "#b8bb26"
+set inputbar-bg                 "#0a0d0d" 
+set inputbar-fg                 "#d8d3cd"
 
-set statusbar-bg                "#b8bb26"
-set statusbar-fg                "#1d2021"
+set statusbar-bg                "#d8d3cd"
+set statusbar-fg                "#0a0d0d"
 
-set notification-error-bg       "#1d2021"
-set notification-error-fg       "#b8bb26" 
+set notification-error-bg       "#121616"
+set notification-error-fg       "#d8d3cd" 
 
-set notification-warning-bg     "#1d2021"
-set notification-warning-fg     "#b8bb26"
+set notification-warning-bg     "#121616"
+set notification-warning-fg     "#d8d3cd"
 
-set highlight-color             "#ddad0e"
-set highlight-active-color      "#d5c4a1"
+set highlight-color             "#e7959b"
+set highlight-active-color      "#c9e9e7"
 
-set notification-bg             "#1d2021"
-set notification-fg             "#b8bb26"
+set notification-bg             "#121616"
+set notification-fg             "#d8d3cd"
 
-set index-bg                    "#1d2021"
-set index-fg                    "#ebdbb2"
+set index-bg                    "#121616"
+set index-fg                    "#e4ace3"
 
-set index-active-bg             "#b8bb26"
-set index-active-fg             "#1d2021"
+set index-active-bg             "#d8d3cd"
+set index-active-fg             "#121616"
 
-set recolor-lightcolor          "#1d2021"
-set recolor-darkcolor           "#d5c4a1"
+set recolor-lightcolor          "#0a0d0d"
+set recolor-darkcolor           "#b7d5d3"
 
 set recolor                     "true"
 set recolor-keephue             "true"

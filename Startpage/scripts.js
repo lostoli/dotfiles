@@ -85,4 +85,30 @@ interact('.draggable')
     target.setAttribute('data-x', x);
     target.setAttribute('data-y', y);
 } 
-   
+
+function tabNT(){
+ var x = document.getElementsByName("NT");
+ var y = document.getElementsByName("DS");
+ var z = document.getElementsByName("NEWS");
+    x[0].style.display = "block";
+    y[0].style.display = "none";
+    z[0].style.display = "none";
+}
+
+function tabDS(){
+ var x = document.getElementsByName("NT");
+ var y = document.getElementsByName("DS");
+ var z = document.getElementsByName("NEWS");
+    x[0].style.display = "none";
+    y[0].style.display = "block";
+    z[0].style.display = "none";
+}
+
+function tabNWS(){
+ var x = document.getElementsByName("NT");
+ var y = document.getElementsByName("DS");
+ var z = document.getElementsByName("NEWS");
+    x[0].style.display = "none";
+    y[0].style.display = "none";
+    z[0].style.display = "block";
+}

@@ -29,7 +29,7 @@ cat >~/dotfiles/Startpage/_colors.scss <<EOL
 
 EOL
 
-sass ~/dotfiles/Startpage/style.scss ~/dotfiles/Startpage/style-test.css
+sass ~/dotfiles/Startpage/style-new.scss ~/dotfiles/Startpage/style-new.css
 sass ~/dotfiles/Startpage/clock-style.scss ~/dotfiles/Startpage/clock-style.css
 
 cp $(grep -o 'pics.*' ~/.fehbg | rev | cut -c 3- | rev) ~/dotfiles/Startpage/bg.jpg

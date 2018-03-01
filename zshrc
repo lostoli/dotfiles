@@ -1,5 +1,3 @@
-
-
 #
 # User configuration sourced by interactive shells
 #
@@ -103,6 +101,7 @@ alias :q='exit'
 alias www='sudo systemctl restart wpa_supplicant.service && sudo systemctl restart connman.service && connmanctl'
 alias pow='sudo tlp stat'
 alias charge='sudo tlp fullcharge BAT1 && sudo tlp fullcharge BAT0'
+alias blue='sudo systemctl restart bluetooth.service && bin/minirig.sh'
 
 function prepend(){
 # @author Abdennour TOUMI
@@ -110,6 +109,7 @@ if [ -e $1 ]; then
     sed -i -e '1i$1\' $1
 fi
 }
+
 function mkscript(){
     if [[ ! -a ~/bin/$1.sh ]]; then 
         touch ~/bin/$1.sh && echo "#!/bin/sh" >! ~/bin/$1.sh && chmod +x ~/bin/$1.sh && $EDITOR ~/bin/$1.sh
@@ -129,3 +129,5 @@ function mult(){
 function div(){
     echo $(($1/$2))
 }
+
+nplayer () (nc -kluw 1 127.0.0.1 5555 > /tmp/mpd.fifo & trap "kill $!" EXIT; ncmpcpp -c $HOME/.ncmpcpp/config-mopidy)

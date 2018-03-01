@@ -62,6 +62,11 @@ let g:deoplete#omni#input_patterns.tex = '\\(?:'
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme='base16color'
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 "fast save
 map <leader>w :w<cr>
@@ -70,10 +75,10 @@ map <leader>w :w<cr>
 map <leader>n :noh<cr>
 
 " Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
+map <leader>tn :enew<cr>
 map <leader>to :tabonly<cr>
-map <leader>tc :tabclose
-map <leader>t :tabnext<cr> 
+map <leader>tc :bp <BAR> bd #<CR>
+map <leader>t :bnext<cr> 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking

@@ -1,6 +1,3 @@
-mkdir ijmart
-mkdir .navcoin
-cd .navcoin/
 search .nav
 open_with 
 cd Dropbox/Math/primitivewalks
@@ -35,7 +32,6 @@ mkdir k-extensions
 mkdir azores
 mkdir auth-keys
 cd /home/oli/.config/ranger/
-delete
 mkdir preamble-md
 rename userChrome.css.old
 rename userChrome.css.scroll
@@ -48,3 +44,7 @@ rename Azores-outbound-eticket.pdf
 rename Azores-inbound-eticket.pdf
 search map
 rename cover.jpg
+open_with less
+cd .config/
+cd .Xresources-colors/
+delete

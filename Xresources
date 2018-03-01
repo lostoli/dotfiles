@@ -9,7 +9,7 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 dzen2.font: inconsolata:size 10
 
-#include "/home/oli/.Xresources-colors/themes/darkbloom"
+#include "/home/oli/.Xresources-colors/themes/meltface"
 
 ! urxvt settings
 URxvt.depth: 32
@@ -45,7 +45,7 @@ URxvt.keysym.Control-Shift-Left: perl:tabbedex:move_tab_left
 URxvt.keysym.Control-Shift-Right: perl:tabbedex:move_tab_right
 URxvt.keysym.Control-Shift-R: perl:tabbedex:rename_tab
 URxvt.borderLess: false
-URxvt.internalBorder: 0 
+URxvt.internalBorder: 3 
 URxvt.urlLauncher     : /usr/bin/firefox 
 URxvt.matcher.button  : 1
 URxvt.tabbed.tabbar-fg: 1 

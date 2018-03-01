@@ -1,0 +1,185 @@
+@import  'colors';
+
+html {
+  position: relative;
+  height: 100%;
+  font-family: "monospace"; }
+
+body {
+  background-image: url("bg.jpg");
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  display: table; }
+
+*:focus {
+  outline: none; }
+
+#search {
+  height: 30px;
+  width: 960px;
+  top: 565px;
+  left: 65px;
+  }
+
+#fortune {
+  overflow-y: auto;
+  height: auto;
+  max-height: 360px;
+  width: 460px;
+  top: 185px;
+  left: 65px;
+  }
+
+#rss {
+  overflow-y: scroll;
+  height: 450px;
+  width: 480px;
+  top: 95px;
+  left: 545px;
+  }
+
+#clock {
+  height: 75px;
+  width: 460px;
+  top: 95px;
+  left: 65px;
+  }
+  
+.drag {
+  background-color: $colorb;
+  border: 2px solid;
+  border-color: $color1;
+  border-radius: 0em;
+  position: absolute;
+  color: $color4;
+  padding: 4px;
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px); }
+
+.resize-drag {
+  background-color: $colorb;
+  color: $color4;
+  box-sizing: border-box; }
+
+h3 {
+  font-size: 14px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 0; }
+
+.color1 {
+  color: $color1;
+  padding: 0; }
+
+.color2 {
+  color: $color2;
+  padding: 0; }
+
+.color3 {
+  color: $color3;
+  padding: 0; }
+
+.color4 {
+  color: $color4;
+  padding: 0; }
+
+.color5 {
+  color: $color5;
+  padding: 0; }
+
+.color6 {
+  color: $color6;
+  padding: 0; }
+
+.color7 {
+  color: $color7;
+  padding: 0; }
+
+.color8 {
+  color: $color8;
+  padding: 0; }
+
+.color9 {
+  color: $color9;
+  padding: 0; }
+
+.color10 {
+  color: $color10;
+  padding: 0; }
+
+.color11 {
+  color: $color11;
+  padding: 0; }
+
+.color12 {
+  color: $color12;
+  padding: 0; }
+
+.color13 {
+  color: $color13;
+  padding: 0; }
+
+.color14 {
+  color: $color14;
+  padding: 0; }
+
+.color15 {
+  color: $color15;
+  padding: 0; }
+
+.colorb {
+  color: $colorb;
+  padding: 0; }
+
+.colorf {
+  color: $colorf;
+  padding: 0; }
+
+form {
+  display: inline; }
+
+input {
+  display: inline;
+  background: none;
+  display: inline;
+  border: none;
+  color: $color4;
+  font-size: 14px; }
+
+a:link {
+  color: $color5; }
+
+a:visited {
+  color: $color5; }
+
+a:hover {
+  color: $color6; }
+
+a:active {
+  color: $color1; }
+
+.btn-group .button {
+    background: none;
+    border: none;
+    padding: 2px 2px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 14px;
+    color: $colorf;
+    cursor: pointer;
+}
+
+.btn-group .button:hover {
+    color: $color5; 
+    background-color: none;
+}
+
+/*# sourceMappingURL=style-test.css.map */
