@@ -1,17 +1,7 @@
-search .nav
-open_with 
-cd Dropbox/Math/primitivewalks
-open_with aunpack
-find 
-mkdir ftplugin
-cd .nvim/
-cd /home/oli/.config/nvim
-wq
 mkdir chrome
 touch userChrome.css
 rename X23-talk-2017.pdf
 open_with brave
-open_with nvim
 mkdir Random collatz
 mkdir pics
 mkdir pics2
@@ -47,4 +37,14 @@ rename cover.jpg
 open_with less
 cd .config/
 cd .Xresources-colors/
+rename clock.js
+open_with nvim
+rename fomoBot
+rename fomoBot_5
+rename fomoBot_3
+rename fomo-bot
+search zim
+search playlists
+search Tom
+cd mnt1
 delete

@@ -47,19 +47,19 @@ body {
   left: 65px; }
 
 .drag {
-  background-color: #0a0d0d;
+  background-color: #0C2817;
   border: 2px solid;
-  border-color: #b8b4ab;
+  border-color: #0A5528;
   border-radius: 0em;
   position: absolute;
-  color: #596868;
+  color: #587073;
   padding: 4px;
   -webkit-transform: translate(0px, 0px);
   transform: translate(0px, 0px); }
 
 .resize-drag {
-  background-color: #0a0d0d;
-  color: #596868;
+  background-color: #0C2817;
+  color: #587073;
   box-sizing: border-box; }
 
 h3 {
@@ -69,71 +69,71 @@ h3 {
   margin-top: 0; }
 
 .color1 {
-  color: #b8b4ab;
+  color: #0A5528;
   padding: 0; }
 
 .color2 {
-  color: #d8d3cd;
+  color: #265C53;
   padding: 0; }
 
 .color3 {
-  color: #8f857c;
+  color: #4B6258;
   padding: 0; }
 
 .color4 {
-  color: #596868;
+  color: #587073;
   padding: 0; }
 
 .color5 {
-  color: #798d8c;
+  color: #63787C;
   padding: 0; }
 
 .color6 {
-  color: #9eb8b7;
+  color: #A29C57;
   padding: 0; }
 
 .color7 {
-  color: #c9e9e7;
+  color: #03709A;
   padding: 0; }
 
 .color8 {
-  color: #46b0ac;
+  color: #587B83;
   padding: 0; }
 
 .color9 {
-  color: #e0c160;
+  color: #677D82;
   padding: 0; }
 
 .color10 {
-  color: #8db3e9;
+  color: #0B8DB4;
   padding: 0; }
 
 .color11 {
-  color: #66aca9;
+  color: #6B8F92;
   padding: 0; }
 
 .color12 {
-  color: #85b0eb;
+  color: #08A5D5;
   padding: 0; }
 
 .color13 {
-  color: #e4ace3;
+  color: #56C0D7;
   padding: 0; }
 
 .color14 {
-  color: #e7959b;
+  color: #A8C2BB;
   padding: 0; }
 
 .color15 {
-  color: #bda765;
+  color: #DBE9EB;
   padding: 0; }
 
 .colorb {
-  color: #0a0d0d;
+  color: #0C2817;
   padding: 0; }
 
 .colorf {
-  color: #b7d5d3;
+  color: #DBE9EB;
   padding: 0; }
 
 form {
@@ -144,20 +144,20 @@ input {
   background: none;
   display: inline;
   border: none;
-  color: #596868;
+  color: #587073;
   font-size: 14px; }
 
 a:link {
-  color: #798d8c; }
+  color: #63787C; }
 
 a:visited {
-  color: #798d8c; }
+  color: #63787C; }
 
 a:hover {
-  color: #9eb8b7; }
+  color: #A29C57; }
 
 a:active {
-  color: #b8b4ab; }
+  color: #0A5528; }
 
 .btn-group .button {
   background: none;
@@ -167,11 +167,11 @@ a:active {
   font-weight: bold;
   display: inline-block;
   font-size: 14px;
-  color: #b7d5d3;
+  color: #DBE9EB;
   cursor: pointer; }
 
 .btn-group .button:hover {
-  color: #798d8c;
+  color: #63787C;
   background-color: none; }
 
 /*# sourceMappingURL=style-test.css.map */

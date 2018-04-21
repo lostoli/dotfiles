@@ -1,22 +1,28 @@
 Xcursor.theme: DMZ 
 
+!URxvt*backgroundPixmap: /home/oli/pics/Wallpapers/randgreytiles.png;style=tiled
+
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb
 Xft.autohint: false
-Xft.hintstyle: hintslight
+!Xft.hintstyle: hintslight
+Xft.hintstyle: hintfull
 Xft.lcdfilter: lcddefault
-dzen2.font: inconsolata:size 10
+!dzen2.font: inconsolata:size 10
 
-#include "/home/oli/.Xresources-colors/themes/meltface"
+#include "/home/oli/.Xresources-colors/themes/autobhan.css"
 
 ! urxvt settings
 URxvt.depth: 32
 URxvt.scrollBar: false
-URxvt.font: xft:Iosevka Term:style=Regular:size=10
-URxvt.italicFont: xft:Iosevka Term:style=Regular:size=10
-URxvt.boldFont: xft:Iosevka Term:style=Bold:size=10
+URxvt.font: xft:Operator Mono Medium:style=Regular:size=10,xft:FontAwesome:style=Regular:size=10,xft:Iosevka Term:style=Regular:size=10, xft:FontopoORIENTAL:style=Regular:size=10
+URxvt.italicFont: xft:Operator Mono Book:style=Italic:size=10
+URxvt.boldFont: xft:Operator Mono Bold:style=Bold:size=10
+!URxvt.font: xft:Iosevka Term:style=Regular:size=10
+!URxvt.italicFont: xft:Iosevka Term:style=Regular:size=10
+!URxvt.boldFont: xft:Iosevka Term:style=Bold:size=10
 !URxvt.font: xft:Hack:style=Italic:size=9
 !URxvt.boldFont: xft:Hack:style=Bold:size=9
 !URxvt.italicFont: xft:Hack:style=Italic:size=9
@@ -48,8 +54,8 @@ URxvt.borderLess: false
 URxvt.internalBorder: 3 
 URxvt.urlLauncher     : /usr/bin/firefox 
 URxvt.matcher.button  : 1
-URxvt.tabbed.tabbar-fg: 1 
-URxvt.tabbed.tabbar-bg: 7 
-URxvt.tabbed.tab-fg: 4 
-URxvt.tabbed.tab-bg: 7 
-URxvt.iconFile: /home/oli/.icons/AwOken/clear/24x24/apps/terminal1.png
+URxvt.tabbed.tabbar-fg: 7 
+URxvt.tabbed.tabbar-bg: 0 
+URxvt.tabbed.tab-fg: 14 
+URxvt.tabbed.tab-bg: 0 
+!URxvt.iconFile: /home/oli/.icons/AwOken/clear/24x24/apps/terminal1.png

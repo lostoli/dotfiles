@@ -28,6 +28,10 @@ super + {t,f,p}
 alt + {_,shift + }Tab
     bspc node -f {next.local,prev.local}
 
+# Cycle nodes
+super ; Tab
+    bspc node -f next.local
+
 #Focus next monitor
 super + m
     bspc monitor next -f
@@ -162,10 +166,8 @@ super + Return
 super + z
     urxvtc
 
-XF86Tools
+XF86Tools; d
     sh ~/bin/dmenu_col_rec.sh 	
-		
-
 
 #super + bracketleft 
 XF86MonBrightnessDown

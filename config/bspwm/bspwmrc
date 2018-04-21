@@ -5,7 +5,7 @@ xrdb ~/.Xresources
 xset +fp /usr/share/fonts/local &
 xset fp rehash &
 xsetroot -cursor_name left_ptr &
-
+xmodmap ~/.speedswap
 
 bspc config border_width        2
 bspc config window_gap          9
@@ -33,6 +33,7 @@ sh ~/bin/bspwmfloatingdesktop.sh &
 dropbox-cli start &
 #sh ~/.config/bspwm/panel/info | dzen2 -p -y -1 -fn inconsolata:size=11 &
 #compton --config ~/.config/compton.conf &
+compton &
 (sleep 1s && unclutter -idle 1 -jitter 2 -root) &
 #(sleep 1s && pnmixer) &
 #(sleep 3s && conky -d -c /home/oli/.conkyrc) &
