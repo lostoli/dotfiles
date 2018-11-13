@@ -12,15 +12,16 @@ Xft.hintstyle: hintfull
 Xft.lcdfilter: lcddefault
 !dzen2.font: inconsolata:size 10
 
-#include "/home/oli/.Xresources-colors/themes/autobhan.css"
+#include "/home/oli/.Xresources-colors/themes/mounts"
 
 ! urxvt settings
 URxvt.depth: 32
 URxvt.scrollBar: false
-URxvt.font: xft:Operator Mono Medium:style=Regular:size=10,xft:FontAwesome:style=Regular:size=10,xft:Iosevka Term:style=Regular:size=10, xft:FontopoORIENTAL:style=Regular:size=10
+URxvt.font: xft:Roboto Mono Medium for Powerline:style=Regular:size=10,xft:FontAwesome:style=Regular:size=10,xft:Iosevka Term SS05:style=Regular:size=10, xft:FontopoORIENTAL:style=Regular:size=10
+!URxvt.font: xft:Operator Mono Medium:style=Regular:size=10,xft:FontAwesome:style=Regular:size=10,xft:Iosevka Term:style=Regular:size=10, xft:FontopoORIENTAL:style=Regular:size=10
 URxvt.italicFont: xft:Operator Mono Book:style=Italic:size=10
 URxvt.boldFont: xft:Operator Mono Bold:style=Bold:size=10
-!URxvt.font: xft:Iosevka Term:style=Regular:size=10
+!URxvt.font: xft:Iosevka Term SS05:style=Regular:size=13
 !URxvt.italicFont: xft:Iosevka Term:style=Regular:size=10
 !URxvt.boldFont: xft:Iosevka Term:style=Bold:size=10
 !URxvt.font: xft:Hack:style=Italic:size=9

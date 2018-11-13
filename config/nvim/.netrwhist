@@ -1,4 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/home/oli'
 let g:netrw_dirhist_2='/home/oli/stuff/fomo-bot/test1'
+let g:netrw_dirhist_3='/home/oli/.offlineimap'
+let g:netrw_dirhist_4='/home/oli/Dropbox/Math/Latticeaction'

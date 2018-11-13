@@ -14,15 +14,21 @@ else
     #E2=$E1" %{F#$Cf}%{F-}"
 fi
 
+if grep -Fxq "$(curl -s ipinfo.io/ip)" "$HOME/stuff/ip-list"; then 
+    VPN="%{F#$C6}%{F-}" 
+else
+    VPN=""
+fi
 
 #if ping -q -w 1 -c 1 8.8.8.8 > /dev/null; then
 #if rfkill list wlan | grep -q 'Soft blocked: no'; then
     #if ip route get 8.8.8.8 | grep -q wlan0; then
 if cat /sys/class/net/wlan0/carrier > /dev/null 2>&1; then
-    E3=" %{F#$C6}%{F-}"
-elif cat /sys/class/net/eth0/carrier > /dev/null 2>&1; then
+    E3=" $VPN %{F#$C6}%{F-}"
+elif [ "$(cat /sys/class/net/eth0/carrier)" -eq "1" ]; then
+    #should test if equal to one.
     #ip route get 8.8.8.8 | grep -q eth0; then
-    E3=" %{F#$C6}%{F-}"
+    E3=" $VPN %{F#$C6}%{F-}"
 else
     E3=" %{F#$C9}%{F-}"
 fi

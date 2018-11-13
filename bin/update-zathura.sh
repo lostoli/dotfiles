@@ -37,7 +37,7 @@ set highlight-active-color      "#$C7"
 set notification-bg             "#$C0"
 set notification-fg             "#$C2"
 
-set index-bg                    "#$C0"
+set index-bg                    "#$C2"
 set index-fg                    "#$C13"
 
 set index-active-bg             "#$C2"
@@ -47,7 +47,7 @@ set recolor-lightcolor          "#$Cb"
 set recolor-darkcolor           "#$Cf"
 
 set recolor                     "true"
-set recolor-keephue             "true"
+set recolor-keephue             "false"
 set recolor-reverse-video       "true"
 set scroll-hstep 9
 

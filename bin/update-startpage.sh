@@ -1,5 +1,6 @@
 #!/bin/sh
-cat >~/dotfiles/Startpage/_colors.scss <<EOL
+P="$HOME/dotfiles/Startpage/lostoli.github.io"
+cat >$P/_colors.scss <<EOL
 \$colorf: #$Cf;
 \$colorb: #$Cb;
 
@@ -29,7 +30,7 @@ cat >~/dotfiles/Startpage/_colors.scss <<EOL
 
 EOL
 
-sass ~/dotfiles/Startpage/style-new.scss ~/dotfiles/Startpage/style-new.css
-sass ~/dotfiles/Startpage/clock-style.scss ~/dotfiles/Startpage/clock-style.css
+sass $HOME/dotfiles/Startpage/style-new.scss $P/style-new.css
+sass $HOME/dotfiles/Startpage/clock-style.scss $P/clock-style.css
 
-cp $(grep -o 'pics.*' ~/.fehbg | rev | cut -c 3- | rev) ~/dotfiles/Startpage/bg.jpg
+cp $(grep -o 'pics.*' ~/.fehbg | rev | cut -c 3- | rev) $P/bg.jpg

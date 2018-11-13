@@ -9,20 +9,29 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'flazz/vim-colorschemes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 Plug 'neomake/neomake'
-Plug 'gorodinskiy/vim-coloresque'
+Plug 'lilydjwg/colorizer'
+Plug 'dhruvasagar/vim-table-mode'
 call plug#end()
 
 let mapleader=" "
+imap jk <ESC>
+tnoremap jk <C-\><C-n>
+inoremap <C-s> <C-\><C-o>:w<CR>
 let g:mapleader=" "
 let maplocalleader=" "
 set t_Co=256
-colorscheme otaku 
+colorscheme flatcolor 
 set background=dark
+"autocmd ColorScheme * highlight! Normal ctermbg=NONE 
+hi Normal ctermbg=NONE
+hi VertSplit ctermbg=6
 set encoding=utf8
 set spelllang=en_gb
 set cursorline
 set foldmethod=marker
+set textwidth=80
 
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_latexmk_progname = 'nvr'
@@ -62,7 +71,7 @@ let g:deoplete#omni#input_patterns.tex = '\\(?:'
 
 
 let g:airline_powerline_fonts = 1
-let g:airline_theme='base16color'
+let g:airline_theme='cool'
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
 if !exists('g:airline_symbols')
@@ -101,7 +110,7 @@ map <leader>n :noh<cr>
 " Useful mappings for managing tabs
 map <leader>tn :enew<cr>
 map <leader>to :tabonly<cr>
-map <leader>tc :bp <BAR> bd #<CR>
+map <leader>bc :bp <BAR> bd #<CR>
 map <leader>t :bnext<cr> 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -134,7 +143,7 @@ nnoremap <C-J> a<CR><Esc>
 
 " cursorline options:
 set cursorline 
-hi CursorLine  cterm=NONE ctermbg=3 ctermfg=16 
+hi CursorLine  cterm=NONE ctermbg=0 ctermfg=6 
 
 " Escape special characters in a string for exact matching.
 " This is useful to copying strings from the file to the search tool
@@ -174,3 +183,14 @@ endfunction
 
 " Start the find and replace command across the entire file
 vmap <leader>r <Esc>:%s/<c-r>=GetVisual()<cr>/
+
+" modify selected text using combining diacritics
+command! -range -nargs=0 Overline        call s:CombineSelection(<line1>, <line2>, '0305')
+command! -range -nargs=0 Underline       call s:CombineSelection(<line1>, <line2>, '0332')
+command! -range -nargs=0 DoubleUnderline call s:CombineSelection(<line1>, <line2>, '0333')
+command! -range -nargs=0 Strikethrough   call s:CombineSelection(<line1>, <line2>, '0336')
+
+function! s:CombineSelection(line1, line2, cp)
+  execute 'let char = "\u'.a:cp.'"'
+  execute a:line1.','.a:line2.'s/\%V[^[:cntrl:]]/&'.char.'/ge'
+endfunction

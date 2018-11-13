@@ -5,7 +5,7 @@ xrdb ~/.Xresources
 xset +fp /usr/share/fonts/local &
 xset fp rehash &
 xsetroot -cursor_name left_ptr &
-xmodmap ~/.speedswap
+#xmodmap ~/.speedswap
 
 bspc config border_width        2
 bspc config window_gap          9
@@ -14,7 +14,7 @@ bspc config top_padding 0
 bspc config focused_border_color '#'$C6
 bspc config normal_border_color '#'$C0
 bspc config presel_feedback_color '#'$C4
-bspc config honor_size_hints true
+bspc config honor_size_hints false
 bspc config split_ratio         0.52
 bspc config borderless_monocle  false 
 bspc config gapless_monocle     false 
@@ -33,7 +33,7 @@ sh ~/bin/bspwmfloatingdesktop.sh &
 dropbox-cli start &
 #sh ~/.config/bspwm/panel/info | dzen2 -p -y -1 -fn inconsolata:size=11 &
 #compton --config ~/.config/compton.conf &
-compton &
+compton -b --xrender-sync --xrender-sync-fence &
 (sleep 1s && unclutter -idle 1 -jitter 2 -root) &
 #(sleep 1s && pnmixer) &
 #(sleep 3s && conky -d -c /home/oli/.conkyrc) &

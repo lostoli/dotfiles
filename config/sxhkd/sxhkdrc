@@ -29,7 +29,7 @@ alt + {_,shift + }Tab
     bspc node -f {next.local,prev.local}
 
 # Cycle nodes
-super ; Tab
+XF86Tools: Tab
     bspc node -f next.local
 
 #Focus next monitor
@@ -168,6 +168,12 @@ super + z
 
 XF86Tools; d
     sh ~/bin/dmenu_col_rec.sh 	
+
+XF86Tools; b
+    blue
+
+XF86Tools; v; 8
+    vpnIL8
 
 #super + bracketleft 
 XF86MonBrightnessDown

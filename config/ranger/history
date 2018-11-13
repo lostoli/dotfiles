@@ -1,50 +1,50 @@
-mkdir chrome
-touch userChrome.css
-rename X23-talk-2017.pdf
-open_with brave
-mkdir Random collatz
-mkdir pics
-mkdir pics2
-mkdir pics3
-mkdir Ariels-pics
-mkdir pics4
-mkdir pics5
-mkdir pics6
-mkdir pics7
-mkdir pics8
-mkdir pics9
-mkdir pics10
-mkdir pics11
-mkdir pics12
-mkdir pics13
-mkdir pics14
-mkdir k-extensions
-mkdir azores
-mkdir auth-keys
-cd /home/oli/.config/ranger/
-mkdir preamble-md
-rename userChrome.css.old
-rename userChrome.css.scroll
-rename userChrome.css.scrol
-rename userChrome.css
-rename userChrome.css.tri
-cd .local/
-
-rename Azores-outbound-eticket.pdf
-rename Azores-inbound-eticket.pdf
-search map
+mark \.JPG_$
+search Variou
+search Rapper
+rename Is That a Riot
+rename Center Level Roar/
+search young
+open_with zathura
+rename Test.hs
+rename old.hs
+rename Lib.hs
+mark *.npy
+mark \.npy$
+mkdir oldpoints
+search Naoya
 rename cover.jpg
+mark *.jpg
+mark '*.jpg'
+mark \.jpg$
+rename Azores 2018
+mkdir Panoramas
+mark *237*
+search Nuls
+search nuls
+mkdir Nuls
+cd Nuls/
+mkdir health insurance
+mkdir Juggling 2018
 open_with less
-cd .config/
-cd .Xresources-colors/
-rename clock.js
-open_with nvim
-rename fomoBot
-rename fomoBot_5
-rename fomoBot_3
-rename fomo-bot
-search zim
-search playlists
-search Tom
-cd mnt1
+mkdir t
+search 0007
+search 0095
+search 0192
+search 0194
+search 0287
+search 171654
+search 130227
+cd .ripple-wallet-linux32-1.4.1/
+open_with
+mkdir owrReport
+search ober
+rename etherwallet.old2
+open_with aunpack
+cd .ethereum/
+open_with brave
+rename bg.jpg
+
+mkdir k-extensions
+cd texmf/tex/latex/preamble-md/
 delete
+rename acc.csv
