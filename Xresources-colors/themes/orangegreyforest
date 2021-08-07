@@ -1,0 +1,36 @@
+! special
+*foreground:   #CCCDD0 
+*background:   #0B0B0B
+*cursorColor:  #ADAEB0 
+
+!black
+*color0:       #0B0B0B
+*color8:       #A58577
+
+!red
+*color1:       #2E211F 
+*color9:       #7C7E81
+
+!green
+*color2:       #87160D
+*color10:      #7E8284
+
+!yellow
+*color3:       #4C433D
+*color11:      #8E8F91
+
+!blue
+*color4:       #545354
+*color12:      #9F9EA0
+
+!magenta
+*color5:       #6E6F71
+*color13:      #ADAEB0 
+
+!cyan
+*color6:       #932A18 
+*color14:      #BFBDC0 
+
+!white
+*color7:       #A65743 
+*color15:      #CCCDD0

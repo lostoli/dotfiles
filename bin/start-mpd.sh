@@ -8,15 +8,18 @@ else
     H=20
 fi
 
+HEIGHT="window.dimensions.lines=$H"
+WIDTH="window.dimensions.columns=84"
+X="window.position.x=0"
+Y="window.position.y=0"
 
 #check if mpd is running
 if pgrep mpd >/dev/null 2>&1
   then
-     #echo "mpd is running"
-	 #urxvt -e "bash -i start-ncmpcpp.sh"
-     urxvtc -g 84x$H+414+61 -e ncmpcpp
+    #echo "mpd is running"
+    alacritty -o $HEIGHT -o $WIDTH -o $X -o $Y -e ncmpcpp
   else
-     # mpd is not running
+    # mpd is not running
 	mpd
-	urxvtc -g 84x$H+414+61 -e ncmpcpp
+    alacritty -o $HEIGHT -o $WIDTH -o $X -o $Y -e ncmpcpp
 fi

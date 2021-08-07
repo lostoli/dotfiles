@@ -9,116 +9,66 @@
 
 ;{{{ global colors
 [colors]
-background = ${xrdb:background};#d4d4d4 
-foreground = ${xrdb:foreground};#dd1f5c
-primary = ${xrdb:color9} 
-secondary = ${xrdb:color6}
-tertiary = ${xrdb:color4}
-alert = ${xrdb:color11}
+background = ${xrdb:background:#121212}
+foreground = ${xrdb:foreground:#ededed}
+separator = ${xrdb:color3:#126789}
+border = ${xrdb:color4:#458712}
+red = ${xrdb:color9:#ef6723}
 
 [global/wm]
 margin-top = 0
 margin-bottom = 0
 ;}}}
 
-;{{{ candy bar
-[bar/candy]
+;{{{ global layout
+[global/layout]
 monitor = eDP1
-width = 1349 
 height = 18 
-offset-x = 9 
-offset-y = 5 
-
-background = ${xrdb:background}
-foreground = ${xrdb:foreground}
-
-overline-size = 0
-overline-color = #f00
-underline-size = 0
-underline-color = #00f
-
-border-bottom-size = 2
-border-bottom-color = ${xrdb:color1} 
-border-top-size = 2
-border-top-color = ${xrdb:color1} 
-border-left-size= 2
-border-left-color = ${xrdb:color1} 
-border-right-size= 2
-border-right-color = ${xrdb:color1} 
-
+background = ${colors.background}
+foreground = ${colors.foreground}
 spacing = 0
 padding-left = 1
 padding-right = 2
 module-margin-left = 0
 module-margin-right = 0
-;font-0 = inconsolata:pixelsize=10;1
-;font-0 = Iosevka Term:pixelsize=9;3
-;font-0 = Operator Mono Medium:pixelsize=9;2
-font-0 = Roboto Mono Medium For Powerline:pixelsize=9;2
-;font-0 = -*-tamsyn-medium-*-*-*-14-*-*-*-*-*-*-*;-1 
-;font-2 = -wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1;-2 
-;font-0 = Hack:pixelsize=9;2
-;font-0 = Misc Tamsyn:pixelsize=12;2
+font-0 = Hack:pixelsize=9;1
 font-1 = FontAwesome:pixelsize=10;2
-;font-1 = unifont:size=10:fontformat=truetype;2
-;font-2 = Wuncon Siji:pixelsize=12;2
 
-;modules-left = pkgupdates-available bspwm-new email mpd volume
-modules-left = bspwm-new bluenetup email mpd pulseaudio 
-modules-center = 
-modules-right = flower weather backlight memory cpu battery-combined-udev date 
-
-;separator = }  { 
-separator = "  " 
-separator-color = ${xrdb:color9}
+modules-left = bspwm-new separator bluenetup separator email-ipc separator pulseaudio separator mpd separator mpd-progress
+modules-right = flower separator backlight separator memory separator cpu separator battery-combined-udev separator date 
 wm-restack = bspwm
 enable-ipc = true
+
+border-bottom-color = ${colors.border} 
+border-top-color = ${colors.border} 
+border-left-color = ${colors.border} 
+border-right-color = ${colors.border} 
+;}}}
+
+;{{{ candy bar
+[bar/candy]
+inherit = global/layout
+width = 1349 
+offset-x = 9 
+offset-y = 5 
+
+border-bottom-size = 2
+border-top-size = 2
+border-left-size= 2
+border-right-size= 2
 ;}}}
 
 ;{{{ wide bar
 [bar/wide]
-monitor = eDP1
+inherit = global/layout
 width = 100% 
-height = 18 
 offset-x = 0 
 offset-y = 0 
 
-background = ${xrdb:background}
-foreground = ${xrdb:foreground}
-
-overline-size = 0
-overline-color = #f00
-underline-size = 0
-underline-color = #00f
-
 border-bottom-size = 2
-border-bottom-color = ${xrdb:color6} 
 border-top-size = 0
-border-top-color = ${xrdb:color1} 
 border-left-size= 0
-border-left-color = ${xrdb:color1} 
 border-right-size= 0
-border-right-color = ${xrdb:color1} 
-
-spacing = 0
-padding-left = 1
-padding-right = 2
-module-margin-left = 0
-module-margin-right = 0
-;font-0 = Iosevka Term:pixelsize=9;2
-;font-0 = Operator Mono Medium:pixelsize=9;2
-font-0 = Roboto Mono Medium For Powerline:pixelsize=9;2
-font-1 = FontAwesome:pixelsize=10;2
-;font-0 = Misc Tamsyn:pixelsize=12;2
-;font-1 = unifont:size=10:fontformat=truetype;2
-;font-2 = Wuncon Siji:pixelsize=12;1
-
-modules-left = bspwm-new bluenetup email mpd pulseaudio 
-modules-center =
-modules-right = flower coins backlight memory cpu battery-combined-udev date 
-separator = "  " 
-wm-restack = bspwm
-enable-ipc = true
 ;}}}
 
 ;{{{ math bar
@@ -156,7 +106,7 @@ font-1 = FontAwesome:pixelsize=10;1
 ;font-1 = unifont:size=10:fontformat=truetype;2
 ;font-2 = Wuncon Siji:pixelsize=12;1
 
-modules-left = pkgupdates-available bspwm-new email music volume
+modules-left = pkgupdates-available bspwm-new email-ipc music volume
 modules-center = 
 modules-right = flower weather memory cpu date 
 separator = "  " 
@@ -170,19 +120,19 @@ type = internal/bspwm
 ws-icon-default = 
 
 label-focused =  
-label-focused-foreground = ${colors.alert}
+label-focused-foreground = ${colors.red}
 label-focused-padding = 0
 
 label-occupied = %icon%
-label-occupied-foreground = ${colors.secondary}
+label-occupied-foreground = ${colors.separator}
 label-occupied-padding = 0
 
 label-urgent = %icon%
-label-urgent-foreground = ${xrdb:color9}
+label-urgent-foreground = ${colors.border}
 label-urgent-padding = 0
 
 label-empty = %icon%
-label-empty-foreground = ${colors.tertiary}
+label-empty-foreground = ${colors.border}
 label-empty-padding = 0
 ;}}}
 
@@ -217,16 +167,55 @@ label-empty-padding = 0
 ;{{{ music
 [module/mpd]
 type = internal/mpd
-format-online = <label-song> 
+format-online = <label-song>
+; separator = "  " 
 format-online-prefix = "Music: "
-format-online-prefix-foreground = ${colors.secondary}
+format-online-prefix-foreground = ${colors.foreground}
+; format.playing = <label-song>
+; format.paused = <label-song>
+; format-stopped = <icon-stop>
+; format-offline = <label-offline>
 label-song-maxlen = 40
 label-song-ellipsis = true
-icon-play = 
-icon-pause = 
-icon-random = 
-icon-repeat = 
-toggle-on-foreground = ${colors.primary}
+
+[module/mpd-progress]
+type = internal/mpd
+format-online = <bar-progress>
+; icon-stop = •
+; icon-play = ⏵
+; icon-stop = stopped
+; label-offline = no music
+; toggle-on-foreground = ${colors.foreground}
+bar-progress-width = 25
+bar-progress-indicator = 
+; bar-progress-fill = •
+bar-progress-fill = 
+bar-progress-empty =  
+;·
+; bar-progress-empty-font = 2
+; bar-progress-indicator-font = 2
+; bar-progress-fill-font = 2
+bar-progress-fill-foreground = ${colors.border}
+bar-progress-empty-foreground = ${colors.background}
+bar-progress-indicator-foreground = ${colors.separator}
+
+; [module/mpd]
+; type = internal/mpd
+; format-online = <bar-progress>  <icon-prev> <icon-stop> <toggle> <icon-next>  <label-song>
+; format-offline = <label-offline>
+; bar-progress-format = %{+o +u}%fill%%{-o -u}%indicator%%{+o +u}%empty%%{-u -o}
+; label-offline = mpd is off
+; format-online-prefix = " "
+; icon-play = 
+; icon-pause = 
+; icon-stop = 
+; icon-prev = 
+; icon-next = 
+; icon-random = 
+; icon-repeat = 
+; toggle-on-foreground =
+; toggle-off-foreground = #55
+
 ;}}}
 
 ;{{{ mopidy
@@ -251,7 +240,7 @@ type = internal/xbacklight
 
 format = <label> 
 format-prefix = "BL: "
-format-prefix-foreground = ${colors.secondary}
+format-prefix-foreground = ${colors.foreground}
 label = %percentage%%
 
 bar-width = 10
@@ -263,7 +252,7 @@ bar-fill-font = 2
 bar-fill-foreground = #9f78e1
 bar-empty = ─
 bar-empty-font = 2
-bar-empty-foreground = ${colors.primary}
+bar-empty-foreground = ${colors.foreground}
 ;}}}
 
 ;{{{ cpu
@@ -271,8 +260,7 @@ bar-empty-foreground = ${colors.primary}
 type = internal/cpu
 interval = 2
 format-prefix = "CPU: "
-format-prefix-foreground = ${colors.secondary}
-format-underline = #f90000
+format-prefix-foreground = ${colors.foreground}
 label = %percentage%%
 ;}}}
 
@@ -281,8 +269,7 @@ label = %percentage%%
 type = internal/memory
 interval = 2
 format-prefix = "RAM: "
-format-prefix-foreground = ${colors.secondary}
-format-underline = #4bffdc
+format-prefix-foreground = ${colors.foreground}
 label = %percentage_used%%
 ;}}}
 
@@ -305,7 +292,7 @@ ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-foreground = ${colors.secondary}
-}}}
+;}}}
 
 ;{{{ date
 [module/date]
@@ -319,8 +306,7 @@ time = %H:%M
 time-alt = %H:%M:%S
 
 format-prefix = 
-format-prefix-foreground = ${colors.secondary}
-format-underline = #0a6cf5
+format-prefix-foreground = ${colors.foreground}
 
 label = %date% %time%
 ;}}}
@@ -362,12 +348,13 @@ format-volume = <ramp-volume> <label-volume>
 format-muted = <label-muted>
 label-volume = %percentage%%
 label-muted =  muted
-label-muted-foreground = ${colors.alert} 
+format-foreground = ${colors.foreground}
+label-muted-foreground = ${colors.border} 
 
 ramp-volume-0 =  
 ramp-volume-1 = 
 ramp-volume-2 = 
-ramp-volume-foreground = ${colors.secondary}
+ramp-volume-foreground = ${colors.foreground}
 ;}}}
 
 ;{{{ battery 
@@ -458,10 +445,17 @@ ellipsis = false
 ;{{{ email
 [module/email]
 type = custom/script
-exec = ~/bin/polyemail.sh 
+exec = ~/bin/polyemail.py 
 tail = false 
-interval = 6 
+interval = 20 
 ellipsis = false
+;}}}
+
+;{{{ email-ipc
+[module/email-ipc]
+type = custom/ipc
+hook-0 = ~/bin/polyemail.py 
+initial = 1 
 ;}}}
 
 ;{{{ bluetooth
@@ -499,7 +493,7 @@ type = custom/script
 interval = 3000 
 format = <label>
 format-prefix = " "
-format-prefix-foreground = ${xrdb:color12} 
+format-prefix-foreground = ${colors.border} 
 exec = ~/bin/weather.sh
 ;}}}
 
@@ -509,6 +503,14 @@ type = custom/script
 interval = 2
 label = %output:0:45:...%
 exec = ~/bin/spotify.sh
+;}}}
+
+;{{{ separator
+[module/separator]
+type = custom/script
+interval = 100001
+exec = ~/bin/polysep.py 
+
 ;}}}
 
 ; vim:ft=dosini

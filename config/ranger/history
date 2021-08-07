@@ -1,50 +1,25 @@
-mark \.JPG_$
-search Variou
-search Rapper
-rename Is That a Riot
-rename Center Level Roar/
-search young
-open_with zathura
-rename Test.hs
-rename old.hs
-rename Lib.hs
-mark *.npy
-mark \.npy$
-mkdir oldpoints
-search Naoya
-rename cover.jpg
-mark *.jpg
-mark '*.jpg'
-mark \.jpg$
-rename Azores 2018
-mkdir Panoramas
-mark *237*
-search Nuls
-search nuls
-mkdir Nuls
-cd Nuls/
-mkdir health insurance
-mkdir Juggling 2018
-open_with less
-mkdir t
-search 0007
-search 0095
-search 0192
-search 0194
-search 0287
-search 171654
-search 130227
-cd .ripple-wallet-linux32-1.4.1/
-open_with
-mkdir owrReport
-search ober
-rename etherwallet.old2
-open_with aunpack
-cd .ethereum/
-open_with brave
-rename bg.jpg
-
-mkdir k-extensions
-cd texmf/tex/latex/preamble-md/
+mk_dir tmp_concept
+mkdir tmp_concept
+cd .local/
+q!
+rename Dockerfile
+cd .tmp/
+rename InferanceEnginePackaged
+rename
+rename qubo_solver
+rename feature_selection
+rename qubo_factory
+rename qubo.py
+rename qubofactory
+open_with 
+mkdir Utils
+mkdir src
+touch __init__.py
+mkdir lib
+mkdir safetyscanner
+mkdir utils
+search .config
+rename nvim.bk
 delete
-rename acc.csv
+search IMG
+rename beer_coast.jpg

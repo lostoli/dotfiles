@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #strings for formatting
-formatS="%{F#$C6}"
+formatS="%{F#$Cf}"
 formatE="%{F-}"
 
 battery_print() {

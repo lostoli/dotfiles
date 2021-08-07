@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for s in "il6" "il11" "uk404" "us1189" "nl-tor1" "il6-tcp" "il8" "uk313"; do
+for s in "il6" "il11" "uk404" "us1189" "nl-tor1" "il6-tcp" "il8" "uk2043" "uk1531" "us2988" "es105"; do
     service="openvpn-client@"$s".service"
     if [ "$(systemctl is-active $service)" = "active" ]; then
         rVPN=$s         
@@ -41,11 +41,20 @@ case "$1" in
     usa) 
         stop "us1189"
     ;;
+    usa2) 
+        stop "us2988"
+    ;;
     tor) 
         stop "nl-tor1"
     ;;
     uk2) 
-        stop "uk313"
+        stop "uk2043"
+    ;;
+    uk3) 
+        stop "uk1531"
+    ;;
+    es) 
+        stop "es105"
     ;;
     *)
         echo "Didn't match anything"

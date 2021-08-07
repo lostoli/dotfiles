@@ -4,14 +4,16 @@
 
 # Change default zim location 
 export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
+export GOOGLE_APPLICATION_CREDENTIALS=/home/oli/stuff/haskell/ken-burns/keys.json
+[[ -d $HOME/.local/bin ]] && export PATH=$HOME/.local/bin:$PATH
 
 # Source zim
 if [[ -s ${ZIM_HOME}/init.zsh ]]; then
   source ${ZIM_HOME}/init.zsh
 fi
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 setopt autocd
 
 #:::::testing
@@ -52,7 +54,6 @@ bindkey  "^[[8~"   end-of-line
 #If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-
 # -- Variables
 export EDITOR=nvim
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -83,7 +84,7 @@ alias restart='killall -SIGUSR1'
 alias update='yay -Syu && sudo paccache -r -k 1 && update.sh'
 #alias update-lightdm='sudo ~/bin/update-lightdm.sh'
 #alias sf='screenfetch -c 1,15'
-alias r-Xres='xrdb ~/.Xresources'
+# alias r-Xres='xrdb ~/.Xresources'
 alias mp='jmtpfs ~/mnt'
 alias up='fusermount -u ~/mnt'
 alias op='offlineimap -o'
@@ -94,7 +95,9 @@ alias vprc='$EDITOR ~/.config/polybar/config'
 alias vsrc='$EDITOR ~/.config/sxhkd/sxhkdrc'
 alias vvrc='$EDITOR ~/.config/$EDITOR/init.vim'
 alias e=$EDITOR
-alias m='mutt'
+alias m='python -m pmail -m client'
+alias p='bpython'
+alias bp='bpython'
 alias se='sudo $EDITOR'
 alias mx='rmaxima'
 alias :q='exit'
@@ -108,8 +111,14 @@ alias vpnIL2='sudo -A vpnSwitch.sh torrent'
 alias vpnIL8='sudo -A vpnSwitch.sh israel8'
 alias vpnUK='sudo -A vpnSwitch.sh uk'
 alias vpnUK2='sudo -A vpnSwitch.sh uk2'
+alias vpnUK3='sudo -A vpnSwitch.sh uk3'
 alias vpnUS='sudo -A vpnSwitch.sh usa'
+alias vpnUS2='sudo -A vpnSwitch.sh usa2'
 alias vpnNL='sudo -A vpnSwitch.sh tor'
+alias vpnES='sudo -A vpnSwitch.sh es'
+
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 
 function prepend(){
 # @author Abdennour TOUMI
