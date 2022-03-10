@@ -39,12 +39,12 @@ touch revenue.py
 rename search
 mkdir entities
 touch utils.py
-cd .config/
 rename get_entities.py
 mkdir key_texts
 touch __init__.py
 find 
-open_with 
-delete
 wq
 
+open_with 
+cd .config/
+delete
