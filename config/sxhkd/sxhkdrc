@@ -137,16 +137,16 @@ alt + 6
     zathura
     
 alt + 7 
-	urxvtc -e ranger
+	  alacritty -e ranger
 
 alt + 8
-    offlineimap -o 
+    brave
 
 alt + 9
-    urxvtc -e mutt
+    teams
 
 alt + 0
-    urxvtc -e gtop 
+    alacritty -e gtop 
 
 XF86Audio{Lower,Raise}Volume
     amixer -M set Master {5%-,5%+}
@@ -160,9 +160,6 @@ Print
 super + space
      test -n "$(mpc | grep playing)" && mpc pause || mpc play
 
-super + Return
-    urxvtc	
-
 super + z
     alacritty
 
@@ -174,9 +171,6 @@ XF86Tools; d
 
 XF86Tools; b
     blue
-
-XF86Tools; v; 8
-    vpnIL8
 
 #super + bracketleft 
 XF86MonBrightnessDown

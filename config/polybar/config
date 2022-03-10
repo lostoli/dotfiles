@@ -22,20 +22,13 @@ margin-bottom = 0
 
 ;{{{ global layout
 [global/layout]
-monitor = eDP1
-height = 18 
 background = ${colors.background}
 foreground = ${colors.foreground}
 spacing = 0
-padding-left = 1
-padding-right = 2
+padding = 1
 module-margin-left = 0
 module-margin-right = 0
-font-0 = Hack:pixelsize=9;1
-font-1 = FontAwesome:pixelsize=10;2
 
-modules-left = bspwm-new separator bluenetup separator email-ipc separator pulseaudio separator mpd separator mpd-progress
-modules-right = flower separator backlight separator memory separator cpu separator battery-combined-udev separator date 
 wm-restack = bspwm
 enable-ipc = true
 
@@ -43,24 +36,44 @@ border-bottom-color = ${colors.border}
 border-top-color = ${colors.border} 
 border-left-color = ${colors.border} 
 border-right-color = ${colors.border} 
+
+[global/layout_laptop]
+monitor = eDP1
+height = 18
+font-0 = Hack:pixelsize=9;1
+font-1 = FontAwesome:pixelsize=10;2
+modules-left = bspwm-new separator bluenetup separator email-ipc separator pulseaudio separator mpd separator mpd-progress
+modules-right = flower separator backlight separator memory separator cpu separator battery-combined-udev separator date 
+
+[global/layout_external]
+monitor = HDMI2
+height = 28
+font-0 = Hack:pixelsize=14;1
+font-1 = FontAwesome:pixelsize=16;2
+modules-left = bspwm-new separator bluenetup separator email-ipc separator pulseaudio separator mpd separator mpd-progress
+modules-right = flower separator memory separator cpu separator battery-combined-udev separator date 
 ;}}}
 
 ;{{{ candy bar
-[bar/candy]
-inherit = global/layout
-width = 1349 
-offset-x = 9 
+[global/candy]
+width = 99.5%
+offset-x = 0.25% 
 offset-y = 5 
 
 border-bottom-size = 2
 border-top-size = 2
 border-left-size= 2
 border-right-size= 2
+
+[bar/candy]
+inherit = global/layout_laptop global/candy global/layout
+
+[bar/candy_external]
+inherit = global/layout_external global/candy global/layout
 ;}}}
 
 ;{{{ wide bar
-[bar/wide]
-inherit = global/layout
+[global/wide]
 width = 100% 
 offset-x = 0 
 offset-y = 0 
@@ -69,6 +82,12 @@ border-bottom-size = 2
 border-top-size = 0
 border-left-size= 0
 border-right-size= 0
+
+[bar/wide]
+inherit = global/layout_laptop global/wide global/layout
+
+[bar/wide_external]
+inherit = global/layout_external global/wide global/layout
 ;}}}
 
 ;{{{ math bar

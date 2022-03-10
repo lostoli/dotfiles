@@ -2,10 +2,17 @@
 
 xrdb ~/.Xresources
 #nitrogen --restore &
-xset +fp /usr/share/fonts/local &
+# xset +fp /usr/share/fonts/local &
 xset fp rehash &
 xsetroot -cursor_name left_ptr &
 #xmodmap ~/.speedswap
+
+# run the xrandr command if an external monitor is connected to the
+# laptop.  This must be executed before the polybar command, so that
+# polybar can set the two separate bars properly.
+# if [ -x $HOME/bin/external_monitor.sh ];then
+#   sh $HOME/bin/external_monitor.sh &
+# fi
 
 bspc config border_width        2
 bspc config window_gap          9
@@ -20,7 +27,14 @@ bspc config borderless_monocle  false
 bspc config gapless_monocle     false 
 bspc config focus_follows_pointer true
 
-bspc monitor -d 1 2 3 4 5 6 
+external_monitor=$(xrandr --query | grep 'HDMI2')
+if [[ $external_monitor = *connected* ]]; then
+    xrandr --output HDMI2 --mode 3840x2160 --primary --output eDP1 --mode 1366x768 --right-of HDMI2 &
+    bspc monitor HDMI2 -d 1 2 3 4 5 6 
+    bspc monitor eDP1 -d 7 8 9 10 11 12
+else
+    bspc monitor eDP1 -d 1 2 3 4 5 6
+fi
 
 bspc rule -a 'Firefox' desktop=^2
 bspc rule -a 'Zathura' state=tiled desktop=^3

@@ -20,6 +20,6 @@ if pgrep mpd >/dev/null 2>&1
     alacritty -o $HEIGHT -o $WIDTH -o $X -o $Y -e ncmpcpp
   else
     # mpd is not running
-	mpd
+	  mpd
     alacritty -o $HEIGHT -o $WIDTH -o $X -o $Y -e ncmpcpp
 fi

@@ -1,25 +1,50 @@
-mk_dir tmp_concept
-mkdir tmp_concept
-cd .local/
-q!
-rename Dockerfile
-cd .tmp/
-rename InferanceEnginePackaged
+mkdir phone_dump_autumn2021
+open_with brave
+search Dow
+search My
+search ethe
+open_with aunpack
+search ttf
+search .local
+cd .local
+mkdir websites
+rename basesearch.py
+rename constants.py
+mkdir fetchers
+e completers
+mkdir autocompletors
+rename dashboard_autocomplete.py
+rename crunchbase_autocomplete.py
+rename crunchbase_client.py
+rename entity_client.py
+rename search_client.py
+rename websitebase.py
+del
+mkdir examples
+mkdir boiler
+mkdir get_
+mkdir get_competitors
+mkdir rank_competitors
+mkdir get_financials
 rename
-rename qubo_solver
-rename feature_selection
-rename qubo_factory
-rename qubo.py
-rename qubofactory
-open_with 
-mkdir Utils
-mkdir src
+rename financials.py
+rename financials
+rename utils.py
+rename data
+mkdir competitors
+mkdir basicinfo
+touch crunchbase.py
+touch employees.py
+touch revenue.py
+rename search
+mkdir entities
+touch utils.py
+cd .config/
+rename get_entities.py
+mkdir key_texts
 touch __init__.py
-mkdir lib
-mkdir safetyscanner
-mkdir utils
-search .config
-rename nvim.bk
+find 
+open_with 
 delete
-search IMG
-rename beer_coast.jpg
+wq
+
