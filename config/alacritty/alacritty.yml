@@ -1,0 +1,45 @@
+colors:
+  bright:
+    black: '#e06c75'
+    blue: '#56b6c2'
+    cyan: '#c678dd'
+    green: '#e5c07b'
+    magenta: '#61afef'
+    red: '#d19a66'
+    white: '#be5046'
+    yellow: '#98c379'
+  normal:
+    black: '#282c34'
+    blue: '#98c379'
+    cyan: '#61afef'
+    green: '#d19a66'
+    magenta: '#56b6c2'
+    red: '#e06c75'
+    white: '#c678dd'
+    yellow: '#e5c07b'
+  primary:
+    background: '#1f2227'
+    foreground: '#abb2bf'
+draw_bold_text_with_bright_colors: false
+font:
+  bold:
+    family: Hack
+    style: Bold
+  italic:
+    family: Operator Mono Book
+    style: Book
+  normal:
+    family: Hack
+    style: Regular
+  offset:
+    x: 0
+    y: 0
+  size: 15.0
+mouse:
+  hide_when_typing: true
+window:
+  padding:
+    x: 0
+    y: 0
+  opacity: 0.96
+window.dynamic_title: true
